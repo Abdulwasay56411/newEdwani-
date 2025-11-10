@@ -15,14 +15,16 @@ const Projects = () => {
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Page Header */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:mx-40 lg:justify-between mb-10 px-4">
+        <div className="order-2 lg:order-1">
         <PageHeader
         title="Our Projects"
         subHeading="OUR LEGACY OF COMPLETED WORKS"
         subtitle="Showcasing a diverse portfolio of large-scale construction and infrastructure projects, we combine decades of experience with innovative solutions and meticulous attention to detail. Each project reflects our unwavering commitment to quality, safety and client satisfaction, demonstrating our ability to deliver complex developments efficiently and reliably. From residential and commercial developments to major infrastructure works, our projects exemplify excellence, precision and sustainable practices that drive growth and create lasting impact."
 
         />
-        <div>
+        </div>
+        <div className="order-1 mb-5 lg:order-2">
           <img src="/projectbg.jpg" className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg" />
         </div>
       </div>

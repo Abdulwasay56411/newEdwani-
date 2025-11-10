@@ -18,16 +18,18 @@ const Aboutus = () => {
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header Component */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between 2xl:mx-40 mb-10 px-4">
+        <div className="order-2 lg:order-1">
         <PageHeader
           title="About Us"
           subtitle="Since 1990, Edwani Contracting has been delivering projects with quality, reliability and innovation across Saudi Arabia. Our success is built on trust, expertise and collaboration.
                     Our experienced team ensures every project meets and exceeds client expectations. We remain dedicated to sustainable practices, the highest safety standards and delivering lasting value. At Edwani Contracting, we are building more than structures. We are building trust, progress and a legacy of excellence."
           subHeading="Our CEO’s Commitment to Excellence"
         />
-        <div>
+        </div>
+        <div className="order-1 mb-5 lg:order-2">
           <img
-            className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg"
+            className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg "
             src="/bgservices.png"
           />
         </div>

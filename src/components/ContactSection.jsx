@@ -237,7 +237,7 @@ const ContactSection = () => {
                     <div className="min-w-0 flex-1">
                       <p className="text-gray-600 text-sm">Phone</p>
                       <p className="text-gray-900 font-semibold text-sm lg:text-base">
-                        050-4393166
+                      +966-50-4393166
                       </p>
                     </div>
                   </div>

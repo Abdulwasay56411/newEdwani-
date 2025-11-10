@@ -6,7 +6,7 @@ const ContactUs = () => {
   return (
     <div className="relative mt-68 md:mt-54">
       {/* Reusable Page Header */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:mx-40 lg:justify-between mb-10 px-4">
         <PageHeader
           title="Contact Us"
           subHeading="YOUR NEXT PROJECT STARTS HERE"
