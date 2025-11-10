@@ -42,16 +42,24 @@ const QualityPolicy = () => {
     <div className="bg-white">
       {/* Hero Section - Matching AreasOfCertification Style */}
       <section className="relative bg-white text-gray-900 py-12 md:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="flex justify-center items-center text-center lg:text-left flex-wrap lg:flex-nowrap lg:justify-between">
+        <div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
             Quality Policy
           </h1>
-          <div className="w-16 sm:w-20 h-1 bg-[#2387C0] mx-auto mb-4 md:mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto italic">
+          <div className="w-16 sm:w-20 h-1 bg-[#2387C0] mx-auto lg:mx-0 mb-4 md:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600  max-w-3xl mx-2 italic">
             "To serve our clients and maintain our position as a leader in our
             areas of operations."
           </p>
         </div>
+        <div>
+              <img
+                src="/qshebg.png"
+                className="w-[400px] h-[300px] mt-5 object-cover rounded-lg"
+              />
+            </div>
+            </div>
       </section>
 
       {/* We Achieve This By Section */}

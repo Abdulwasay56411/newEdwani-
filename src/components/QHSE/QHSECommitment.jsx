@@ -12,7 +12,7 @@ import { FaLeaf } from "react-icons/fa";
 
 const QHSECommitment = () => {
   const primaryColor = "#2387C0";
- 
+
   const pillars = [
     {
       icon: TbShieldFilled,
@@ -82,37 +82,44 @@ const QHSECommitment = () => {
     <div className="bg-white">
       {/* Main Heading Section - Only One Heading */}
       <section className="relative bg-white text-gray-900 py-12 md:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
-            Our QHSE Commitment
-          </h1>
-          <div className="w-16 sm:w-20 h-1 bg-[#2387C0] mx-auto mb-4 md:mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            At Edwani Contracting, our long-term success depends on our
-            ability to continually improve while protecting our people, clients,
-            and the environment.
-          </p>
-
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 md:gap-3 mt-6 md:mt-8">
-            <div className="flex items-center bg-[#2387C0] text-white rounded-lg px-4 py-2 w-full sm:w-auto justify-center">
-              <BiTargetLock className="h-4 w-4 md:h-5 md:w-5 mr-2" />
-              <span className="text-xs md:text-sm font-medium">
-                Zero Errors
-              </span>
-            </div>
-            <div className="flex items-center bg-[#2387C0] text-white rounded-lg px-4 py-2 w-full sm:w-auto justify-center">
-              <TbShieldFilled className="h-4 w-4 md:h-5 md:w-5 mr-2" />
-              <span className="text-xs md:text-sm font-medium">
-                Zero Incidents
-              </span>
-            </div>
-            <div className="flex items-center bg-[#2387C0] text-white rounded-lg px-4 py-2 w-full sm:w-auto justify-center">
-              <TrophyIcon className="h-4 w-4 md:h-5 md:w-5 mr-2" />
-              <span className="text-xs md:text-sm font-medium">
-                Superior Quality
-              </span>
+        <div className="flex justify-center items-center text-center lg:text-left flex-wrap lg:flex-nowrap lg:justify-between">
+          <div>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
+              Our QHSE Commitment
+            </h1>
+            <div className="w-16 sm:w-20 h-1 bg-[#2387C0] mx-auto mb-4 md:mb-6"></div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-2">
+              At Edwani Contracting, our long-term success depends on our
+              ability to continually improve while protecting our people,
+              clients, and the environment.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center lg:justify-start  gap-2 md:gap-3 mt-6 md:mt-8">
+              <div className="flex items-center bg-[#2387C0] text-white rounded-lg px-4 py-2 w-full sm:w-auto justify-center">
+                <BiTargetLock className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+                <span className="text-xs md:text-sm font-medium">
+                  Zero Errors
+                </span>
+              </div>
+              <div className="flex items-center bg-[#2387C0] text-white rounded-lg px-4 py-2 w-full sm:w-auto justify-center">
+                <TbShieldFilled className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+                <span className="text-xs md:text-sm font-medium">
+                  Zero Incidents
+                </span>
+              </div>
+              <div className="flex items-center bg-[#2387C0] text-white rounded-lg px-4 py-2 w-full sm:w-auto justify-center">
+                <TrophyIcon className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+                <span className="text-xs md:text-sm font-medium">
+                  Superior Quality
+                </span>
+              </div>
             </div>
           </div>
+            <div>
+              <img
+                src="/qshebg.png"
+                className="w-[400px] h-[300px] mt-5 object-cover rounded-lg"
+              />
+            </div>
         </div>
       </section>
 
@@ -167,8 +174,9 @@ const QHSECommitment = () => {
             <div>
               <p className="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
                 Certified in alignment with international HSE standards, our
-                policies are implemented across all Edwani Contracting operations to
-                ensure the highest levels of protection and sustainability.
+                policies are implemented across all Edwani Contracting
+                operations to ensure the highest levels of protection and
+                sustainability.
               </p>
 
               <div className="space-y-4 md:space-y-6">

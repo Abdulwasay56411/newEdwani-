@@ -7,22 +7,18 @@ import ProjectCard3 from "../components/Project/ProjectCard3";
 const Projects3 = () => {
   return (
     <motion.div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden mt-44"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header Component */}
-      <PageHeader
-        title="Infrastructure & Agricultural"
-        subtitle="Edwani Contracting"
-        image="/projectbg.jpg"
-      />
+      <PageHeader/>
 
       {/* Project Story Section */}
       <motion.section
-        className="px-8 md:px-16 lg:px-24 py-8 md:py-10"
+        className="px-8 md:px-16 lg:px-24 py-8"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

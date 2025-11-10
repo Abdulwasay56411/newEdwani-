@@ -6,22 +6,18 @@ import PageHeader from "../../components/PageHeader"; // ✅ import reusable hea
 const Awards = () => {
   return (
     <motion.div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden mt-44 md:mt-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header */}
-      <PageHeader
-        title="Awards & Recognition"
-        subtitle="Edwani Contracting"
-        image="/qshebg.png"
-      />
+      <PageHeader/>
 
       {/* ✅ Awards Section */}
       <motion.section
-        className="px-8 md:px-16 lg:px-24 py-8 md:py-10"
+        className="px-8 md:px-16 lg:px-18 py-8 md:py-10"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

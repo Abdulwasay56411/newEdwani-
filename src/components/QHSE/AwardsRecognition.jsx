@@ -97,16 +97,24 @@ const AwardsRecognition = () => {
     <div className="bg-white">
       {/* Main Heading Section - Only One Heading */}
       <section className="relative bg-white text-gray-900 py-12 md:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
-            Awards & Recognition
-          </h1>
-          <div className="w-16 sm:w-20 h-1 bg-[#2387C0] mx-auto mb-4 md:mb-6"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Celebrating excellence in construction, safety, environmental
-            management, and client satisfaction through industry recognition and
-            awards.
-          </p>
+        <div className="flex justify-center items-center text-center lg:text-left flex-wrap lg:flex-nowrap lg:justify-between">
+          <div>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
+              Awards & Recognition
+            </h1>
+            <div className="w-16 sm:w-20 h-1 bg-[#2387C0] mx-auto mb-4 md:mb-6"></div>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-2">
+              Celebrating excellence in construction, safety, environmental
+              management, and client satisfaction through industry recognition
+              and awards.
+            </p>
+          </div>
+          <div>
+            <img
+              src="/qshebg.png"
+              className="w-[400px] h-[300px] mt-5 object-cover rounded-lg"
+            />
+          </div>
         </div>
       </section>
 
