@@ -465,8 +465,8 @@ const TransparentNavbar = () => {
               className="flex items-center cursor-pointer flex-shrink-0 group min-w-0 mx-2"
             >
               <img
-                width={60}
-                height={60}
+                width={50}
+                height={50}
                 src="/icon1.png"
                 alt="Edwani Contracting"
                 className="transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
