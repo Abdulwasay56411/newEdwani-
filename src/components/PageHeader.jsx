@@ -57,7 +57,7 @@ const PageHeader = ({ title, subtitle, subHeading }) => {
         >
           <div className="w-full max-w-[750px]">
             <motion.h1
-              className="text-black px-2 font-bold text-5xl pb-4"
+              className="text-black px-2 font-bold text-4xl sm:text-5xl pb-4"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
