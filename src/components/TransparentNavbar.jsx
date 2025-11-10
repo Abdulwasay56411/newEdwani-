@@ -219,7 +219,7 @@ const TransparentNavbar = () => {
 
       {/* Main Navigation Bar */}
       <div className="w-full bg-white/98 backdrop-blur-lg shadow-lg border-b border-gray-100">
-        <div className="w-full py-2 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+        <div className="w-full py-2 px-4 sm:px-6 lg:px-8 xl:px-6 2xl:px-14">
           {/* ===== Desktop Navbar (1024px and above) - Fixed Spacing ===== */}
           <nav className="hidden xl:flex items-center justify-between py-3">
             {/* Logo - Left Side with proper spacing */}
@@ -228,8 +228,8 @@ const TransparentNavbar = () => {
               className="flex items-center cursor-pointer select-none flex-shrink-0 group min-w-0 mr-8"
             >
               <img
-                width={120}
-                height={120}
+                width={90}
+                height={90}
                 src="/icon1.png"
                 alt="Edwani Contracting"
                 className="mr-3 transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
@@ -340,8 +340,8 @@ const TransparentNavbar = () => {
               className="flex items-center cursor-pointer select-none flex-shrink-0 group min-w-0"
             >
               <img
-                width={120}
-                height={120}
+                width={90}
+                height={90}
                 src="/icon1.png"
                 alt="Edwani Contracting"
                 className="mr-3 transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
@@ -354,8 +354,8 @@ const TransparentNavbar = () => {
             </div>
 
             {/* Navigation Links - Adjusted for tablet */}
-            <div className="flex items-center justify-center flex-1 min-w-0 mx-4">
-              <ul className="flex items-center justify-center space-x-4">
+            <div className="flex items-cente text-base justify-center flex-1 min-w-0 mx-4">
+              <ul className="flex items-center justify-center space-x-6">
                 {mainLinks.slice(0, 5).map(
                   (
                     link,
@@ -375,7 +375,7 @@ const TransparentNavbar = () => {
                         <div className="flex items-center">
                           <div
                             onClick={() => handleMainItemClick(link)}
-                            className={`flex items-center gap-1 text-[14px]  font-semibold cursor-pointer transition-all duration-300 hover:scale-105 whitespace-nowrap ${
+                            className={`flex items-center gap-1 text-base font-semibold cursor-pointer transition-all duration-300 hover:scale-105 whitespace-nowrap ${
                               isDropdownActive(link.name)
                                 ? "text-[#2387C0]"
                                 : "text-[#171717] hover:text-[#2387C0]"
@@ -404,7 +404,7 @@ const TransparentNavbar = () => {
                       ) : (
                         <div
                           onClick={() => handleNavigation(link.path)}
-                          className={`text-[14px] font-semibold cursor-pointer transition-all duration-300 hover:scale-105 whitespace-nowrap ${
+                          className={`text-base font-semibold cursor-pointer transition-all duration-300 hover:scale-105 whitespace-nowrap ${
                             isActivePath(link.path)
                               ? "text-[#2387C0]"
                               : "text-[#171717] hover:text-[#2387C0]"
@@ -465,14 +465,14 @@ const TransparentNavbar = () => {
               className="flex items-center cursor-pointer flex-shrink-0 group min-w-0 mx-2"
             >
               <img
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 src="/icon1.png"
                 alt="Edwani Contracting"
                 className="mr-2 transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
               />
               <div className="text-start min-w-0">
-                <h1 className="text-sm font-bold text-[#2387C0] leading-tight whitespace-nowrap">
+                <h1 className="text-base font-bold text-[#2387C0] leading-tight whitespace-nowrap">
                   Edwani Contracting
                 </h1>
               </div>
@@ -513,8 +513,8 @@ const TransparentNavbar = () => {
           <div className="flex items-center justify-between p-6 bg-gradient-to-r bg-white shadow-lg">
             <div className="flex items-center min-w-0 gap-1">
               <img
-                width={40}
-                height={40}
+                width={50}
+                height={50}
                 src="/icon1.png"
                 alt="Edwani"
                 className=""
