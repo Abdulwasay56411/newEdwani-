@@ -3,13 +3,9 @@ import PageHeader from "../../components/PageHeader";
 
 const ConstructionMaterial = () => {
   return (
-    <div className="relative">
+    <div className="relative mt-54 md:mt-40">
       {/* ✅ Reusable Header Component */}
-      <PageHeader
-        title="Construction Material Supply"
-        subtitle="Edwani Contracting"
-        image="/uzair.png"
-      />
+      <PageHeader/>
 
       {/* ✅ Content Section (unchanged) */}
       <div className=" bg-gray-50 ">
@@ -44,7 +40,15 @@ const ConstructionMaterial = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              <div>
+                <img
+                  src="/uzair.png"
+                  className="w-[500px] h-[400px] mt-5 mr-4 object-cover rounded-lg"
+                />
+              </div>
+
+            </div>
+              <div className="w-full my-10 bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-[#2387C0] mb-6">
                   Material Categories
                 </h3>
@@ -70,7 +74,6 @@ const ConstructionMaterial = () => {
                   </div>
                 ))}
               </div>
-            </div>
           </div>
         </div>
       </div>

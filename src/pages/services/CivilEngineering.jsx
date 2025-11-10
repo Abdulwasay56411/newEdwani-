@@ -5,14 +5,9 @@ import PageHeader from "../../components/PageHeader";
 
 const CivilEngineering = () => {
   return (
-    <div className="relative">
+    <div className="relative mt-54 md:mt-40">
       {/* ✅ Reusable Header */}
-      <PageHeader
-        title="Civil Engineering"
-        subtitle="Edwani Contracting"
-        image="/uzair.png"
-      />
-
+      <PageHeader/>
       <div className="bg-gray-50">
         {/* Content Section */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -68,7 +63,15 @@ const CivilEngineering = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              <div>
+                <img
+                  src="/uzair.png"
+                  className="w-[500px] h-[400px] mt-5 mr-4 object-cover rounded-lg"
+                />
+              </div>
+
+                </div>
+              <div className="w-full my-10 bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-[#2387C0] mb-6">
                   Civil Engineering Services
                 </h3>
@@ -106,7 +109,6 @@ const CivilEngineering = () => {
                       Drainage and flood control systems
                     </p>
                   </div>
-                </div>
               </div>
             </div>
           </div>
