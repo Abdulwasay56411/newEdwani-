@@ -8,18 +8,24 @@ import PageHeader from "../components/PageHeader"; // ✅ Import Reusable Header
 const Projects = () => {
   return (
     <motion.div
-      className="relative overflow-hidden mt-40"
+      className="relative overflow-hidden  mt-68 md:mt-54"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Page Header */}
-      <PageHeader
-        // title="Our Projects"
-        // subtitle="Edwani Contracting"
-        // image="/projectbg.jpg"
-      />
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between mb-10 px-4">
+        <PageHeader
+        title="Our Projects"
+        subHeading="OUR LEGACY OF COMPLETED WORKS"
+        subtitle="Showcasing a diverse portfolio of large-scale construction and infrastructure projects, we combine decades of experience with innovative solutions and meticulous attention to detail. Each project reflects our unwavering commitment to quality, safety and client satisfaction, demonstrating our ability to deliver complex developments efficiently and reliably. From residential and commercial developments to major infrastructure works, our projects exemplify excellence, precision and sustainable practices that drive growth and create lasting impact."
+
+        />
+        <div>
+          <img src="/projectbg.jpg" className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg" />
+        </div>
+      </div>
 
       {/* ✅ Project Story Section */}
       <motion.section

@@ -22,18 +22,26 @@ const fadeInUp = {
 const Career = () => {
   return (
     <motion.div
-      className="relative"
+      className="relative  mt-68 md:mt-54"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
       {/* ✅ Reusable Page Header */}
-      <PageHeader
-        title="Career"
-        subtitle="Edwani Contracting"
-        image="/careerbg.jpg"
-      />
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between mb-10 px-4">
+        <PageHeader
+          title="Career"
+          subHeading="CAREERS THAT SHAPE THE FUTURE"
+          subtitle="Join our team and be part of a dynamic, innovative and growth-driven organization. We are always looking for talented and motivated individuals who are passionate about making an impact. At our company, you’ll find opportunities to grow professionally, work on challenging projects and contribute to a culture of excellence, collaboration and continuous learning. Your skills, ideas and dedication are valued, and together we build solutions that shape the future of construction and infrastructure."
+        />
+        <div>
+          <img
+            className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg"
+            src="/careerbg.jpg"
+          />
+        </div>
+      </div>
 
       {/* ===== MAIN SECTIONS ===== */}
 
