@@ -11,19 +11,19 @@ import PageHeader from "../components/PageHeader"; // ✅ Import PageHeader
 const Aboutus = () => {
   return (
     <motion.div
-      className="relative overflow-hidden mt-52"
+      className="relative overflow-hidden mt-68 md:mt-54"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header Component */}
-      <div className="flex items-center justify-between mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between mb-10 px-4">
         <PageHeader
           title="About Us"
           subtitle="Since 1990, Edwani Contracting has been delivering projects with quality, reliability and innovation across Saudi Arabia. Our success is built on trust, expertise and collaboration.
                     Our experienced team ensures every project meets and exceeds client expectations. We remain dedicated to sustainable practices, the highest safety standards and delivering lasting value. At Edwani Contracting, we are building more than structures. We are building trust, progress and a legacy of excellence."
-          subHeading= "Our CEO’s Commitment to Excellence"               
+          subHeading="Our CEO’s Commitment to Excellence"
         />
         <div>
           <img

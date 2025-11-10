@@ -9,17 +9,18 @@ import MechanicalServices from "../components/MechanicalServices";
 const Services = () => {
   return (
     <motion.div
-      className="relative overflow-hidden mt-52"
+      className="relative overflow-hidden mt-68 md:mt-54"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header Component */}
-      <div className="flex justify-between items-center mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between mb-10 px-4">
         <PageHeader
           title="Our Services"
-          subtitle="Delivering comprehensive construction and infrastructure solutions across Saudi Arabia with decades of experience, a skilled and certified team and an unwavering commitment to quality, safety and client satisfaction."
+          subHeading="OUR COMMITMENT TO QUALITY SERVICE"
+          subtitle="Delivering comprehensive construction and infrastructure solutions across Saudi Arabia, we bring decades of hands-on experience, a highly skilled and certified team and an unwavering commitment to excellence. Our focus on quality, safety and client satisfaction ensures that every project is executed with precision, reliability and attention to detail, making us a trusted partner for businesses and communities seeking innovative and sustainable construction solutions."
         />
         <div>
           <img
