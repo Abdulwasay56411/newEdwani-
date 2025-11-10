@@ -232,7 +232,7 @@ const TransparentNavbar = () => {
                 height={90}
                 src="/icon1.png"
                 alt="Edwani Contracting"
-                className="mr-3 transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
+                className=" transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
               />
               <div className="min-w-0">
                 <h1 className="text-xl xl:text-2xl 2xl:text-3xl font-bold text-[#2387C0] leading-tight whitespace-nowrap">
@@ -344,7 +344,7 @@ const TransparentNavbar = () => {
                 height={90}
                 src="/icon1.png"
                 alt="Edwani Contracting"
-                className="mr-3 transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
+                className="transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
               />
               <div className="min-w-0">
                 <h1 className="text-lg lg:text-xl font-bold text-[#2387C0] leading-tight whitespace-nowrap">
@@ -469,7 +469,7 @@ const TransparentNavbar = () => {
                 height={60}
                 src="/icon1.png"
                 alt="Edwani Contracting"
-                className="mr-2 transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
+                className="transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
               />
               <div className="text-start min-w-0">
                 <h1 className="text-base font-bold text-[#2387C0] leading-tight whitespace-nowrap">
