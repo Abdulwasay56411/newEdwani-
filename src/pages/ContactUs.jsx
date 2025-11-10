@@ -14,7 +14,7 @@ const ContactUs = () => {
         />
         <div>
           <img
-            className="w-[400px] h-[300px] mt-5 object-cover rounded-lg"
+            className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg"
             src="/contactusbg2.jpg"
           />
         </div>
