@@ -8,7 +8,7 @@ import PageHeader from "../components/PageHeader"; // ✅ Import Reusable Header
 const Projects = () => {
   return (
     <motion.div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden mt-40"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -16,9 +16,9 @@ const Projects = () => {
     >
       {/* ✅ Reusable Page Header */}
       <PageHeader
-        title="Our Projects"
-        subtitle="Edwani Contracting"
-        image="/projectbg.jpg"
+        // title="Our Projects"
+        // subtitle="Edwani Contracting"
+        // image="/projectbg.jpg"
       />
 
       {/* ✅ Project Story Section */}

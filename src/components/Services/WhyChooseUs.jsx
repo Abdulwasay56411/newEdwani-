@@ -27,11 +27,11 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="w-full py-12 sm:py-16 lg:py-20 xl:py-28 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20">
+    <section className="w-full py-12 sm:py-16 lg:py-20 xl:py-2 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-0 left-0 w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 bg-[#2387C0]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-0 left-0 w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72  rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}

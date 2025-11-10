@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import TransparentNavbar from "./TransparentNavbar";
 
-const PageHeader = ({ title, subtitle, image }) => {
+const PageHeader = ({ title, subtitle, subHeading }) => {
   return (
     <motion.div
       className="relative"
@@ -11,14 +11,11 @@ const PageHeader = ({ title, subtitle, image }) => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div
-        className="relative w-full bg-cover bg-center h-[600px] md:h-[700px] flex flex-col"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(35, 135, 192, 0.4)), url(${image})`,
-          backgroundPosition: "center 30%",
-        }}
+      // className="w-full h-auto bg-cover bg-center"
+      // style={{ backgroundImage: `url(${image})` }}
       >
         {/* Animated Gradient Blobs */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#2387C0] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
             animate={{
@@ -44,7 +41,7 @@ const PageHeader = ({ title, subtitle, image }) => {
               delay: 1,
             }}
           />
-        </div>
+        </div> */}
 
         {/* Navbar */}
         <div className="w-full relative z-20">
@@ -58,25 +55,36 @@ const PageHeader = ({ title, subtitle, image }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="text-center space-y-6 max-w-4xl mx-auto">
+          <div className="w-full max-w-[750px]">
             <motion.h1
-              className="text-white font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-tight pt-28"
+              className="text-black px-2 font-bold text-5xl pb-4"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {title}
             </motion.h1>
-
             <motion.div
-              className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl inline-block"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <h2 className="text-white font-semibold text-lg sm:text-2xl md:text-3xl lg:text-4xl tracking-wide">
-                {subtitle}
-              </h2>
+              {subHeading && (
+                <h3
+                  className="text-[#2387C0] text-sm md:text-base font-semibold text-nowrap uppercase
+               bg-blue-50 py-1.5 px-2 w-full max-w-[350px] mb-4 rounded-full border border-blue-100"
+                >
+                  {subHeading}
+                </h3>
+              )}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <h2 className="text-black text-base px-2">{subtitle}</h2>
             </motion.div>
           </div>
         </motion.div>

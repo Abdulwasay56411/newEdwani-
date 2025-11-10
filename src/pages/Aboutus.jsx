@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Section2 from "../components/About/Section2";
-import TransparentNavbar from "../components/TransparentNavbar";
 import SpecializationSection from "../components/About/SpecializationSection";
 import VisionAndValues from "../components/About/VisionAndValues";
 import SafetyStandards from "../components/About/SafetyStandards";
@@ -12,18 +11,27 @@ import PageHeader from "../components/PageHeader"; // ✅ Import PageHeader
 const Aboutus = () => {
   return (
     <motion.div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden mt-52"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header Component */}
-      <PageHeader
-        title="About Us"
-        subtitle="Edwani Contracting"
-        image="/bgservices.png"
-      />
+      <div className="flex items-center justify-between mb-10 px-4">
+        <PageHeader
+          title="About Us"
+          subtitle="Since 1990, Edwani Contracting has been delivering projects with quality, reliability and innovation across Saudi Arabia. Our success is built on trust, expertise and collaboration.
+                    Our experienced team ensures every project meets and exceeds client expectations. We remain dedicated to sustainable practices, the highest safety standards and delivering lasting value. At Edwani Contracting, we are building more than structures. We are building trust, progress and a legacy of excellence."
+          subHeading= "Our CEO’s Commitment to Excellence"               
+        />
+        <div>
+          <img
+            className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg"
+            src="/bgservices.png"
+          />
+        </div>
+      </div>
 
       {/* ===== Sections Below ===== */}
 

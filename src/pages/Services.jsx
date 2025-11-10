@@ -9,18 +9,25 @@ import MechanicalServices from "../components/MechanicalServices";
 const Services = () => {
   return (
     <motion.div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden mt-52"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header Component */}
-      <PageHeader
-        title="Our Services"
-        subtitle="Edwani Contracting"
-        image="/uzair.png"
-      />
+      <div className="flex justify-between items-center mb-10 px-4">
+        <PageHeader
+          title="Our Services"
+          subtitle="Delivering comprehensive construction and infrastructure solutions across Saudi Arabia with decades of experience, a skilled and certified team and an unwavering commitment to quality, safety and client satisfaction."
+        />
+        <div>
+          <img
+            className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg"
+            src="/uzair.png"
+          />
+        </div>
+      </div>
 
       {/* Sections */}
       <motion.section
