@@ -15,7 +15,7 @@ const Projects = () => {
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Page Header */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:mx-40 lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center  lg:justify-between mb-10 px-4">
         <div className="order-2 lg:order-1">
         <PageHeader
         title="Our Projects"
@@ -25,7 +25,7 @@ const Projects = () => {
         />
         </div>
         <div className="order-1 mb-5 lg:order-2">
-          <img src="/projectbg.jpg" className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg" />
+          <img src="/projectbg.jpg" className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg shadow-md" />
         </div>
       </div>
 
