@@ -87,7 +87,7 @@ const QHSECommitment = () => {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
               Our QHSE Commitment
             </h1>
-            <div className="w-16 sm:w-20 h-1 bg-[#2387C0] mx-auto mb-4 md:mb-6"></div>
+            <div className="w-16 sm:w-20 h-1 bg-[#2387C0] mx-auto lg:mx-0 mb-4 md:mb-6"></div>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-2">
               At Edwani Contracting, our long-term success depends on our
               ability to continually improve while protecting our people,
