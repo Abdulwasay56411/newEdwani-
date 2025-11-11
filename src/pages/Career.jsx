@@ -8,6 +8,7 @@ import WhyJoinUs from "../components/Career/WhyJoinUs";
 import CurrentOpenings from "../components/Career/CurrentOpenings";
 import EmployeeVoicesAndBenefits from "../components/Career/EmployeeVoicesAndBenefits";
 import ApplyNow from "../components/Career/ApplyNow";
+import TransparentNavbar from "../components/TransparentNavbar";
 
 // ===== Framer Motion Variants =====
 const fadeInUp = {
@@ -22,14 +23,15 @@ const fadeInUp = {
 const Career = () => {
   return (
     <motion.div
-      className="relative  mt-68 md:mt-54"
+      className="relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
+       <TransparentNavbar/>
       {/* ✅ Reusable Page Header */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center  lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center  lg:justify-between mb-10 px-4">
         <PageHeader
           title="Career"
           subHeading="CAREERS THAT SHAPE THE FUTURE"

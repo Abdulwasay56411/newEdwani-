@@ -2,11 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import EnvironmentalPolicy2 from "../../components/QHSE/EnvironmentalPolicy";
 import PageHeader from "../../components/PageHeader"; // ✅ Import Reusable Header
+import TransparentNavbar from "../../components/TransparentNavbar";
 
 const EnvironmentalPolicy = () => {
   return (
-    <div className="relative mt-44 md:mt-20">
+    <div className="relative">
       {/* ✅ Reusable Page Header */}
+      <TransparentNavbar/>
       <PageHeader/>
 
       {/* ✅ Content Section */}

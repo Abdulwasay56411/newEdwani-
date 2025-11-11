@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader"; // ✅ Reusable Header
 import SectionOne from "../components/Electrical/SectionOne";
 import SectionTwo from "../components/Electrical/SectionTwo";
+import TransparentNavbar from "../components/TransparentNavbar";
 
 // ===== Variants for Reuse =====
 const fadeInUp = {
@@ -24,6 +25,7 @@ const ElectricalWorks = () => {
       transition={{ duration: 1 }}
     >
       {/* ✅ Reusable Page Header */}
+      <TransparentNavbar/>
       <PageHeader
         title="Electrical Works"
         subtitle="Edwani Contracting"

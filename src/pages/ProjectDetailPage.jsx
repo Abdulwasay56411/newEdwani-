@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ProjectDetail from "../components/ProjectDetail";
 import PageHeader from "../components/PageHeader";
+import TransparentNavbar from "../components/TransparentNavbar";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -22,6 +23,7 @@ const ProjectDetailPage = () => {
       transition={{ duration: 1 }}
     >
       {/* ✅ Page Header */}
+      <TransparentNavbar/>
       <PageHeader
         title="Project Detail"
         subtitle="Edwani Contracting"

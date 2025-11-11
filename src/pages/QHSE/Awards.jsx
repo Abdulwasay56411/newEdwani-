@@ -2,17 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import AwardsRecognition from "../../components/QHSE/AwardsRecognition";
 import PageHeader from "../../components/PageHeader"; // ✅ import reusable header
+import TransparentNavbar from "../../components/TransparentNavbar";
 
 const Awards = () => {
   return (
     <motion.div
-      className="relative overflow-hidden mt-44 md:mt-20"
+      className="relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header */}
+     <TransparentNavbar/>
       <PageHeader/>
 
       {/* ✅ Awards Section */}

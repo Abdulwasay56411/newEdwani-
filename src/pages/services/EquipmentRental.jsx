@@ -1,15 +1,17 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader";
+import TransparentNavbar from "../../components/TransparentNavbar";
 
 const EquipmentRental = () => {
   return (
-    <div className="relative mt-54 md:mt-40">
+    <div className="relative">
       {/* ✅ Reusable PageHeader Component */}
+      <TransparentNavbar/>
       <PageHeader/>
 
       {/* ✅ Content Section (unchanged) */}
       <div className=" bg-gray-50 ">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="container mx-auto px-4 py-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>

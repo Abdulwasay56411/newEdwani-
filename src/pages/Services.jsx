@@ -5,18 +5,20 @@ import WhyChooseUs from "../components/Services/WhyChooseUs";
 import Services2 from "../components/Services";
 import LastSection from "../components/Services/LastSection";
 import MechanicalServices from "../components/MechanicalServices";
+import TransparentNavbar from "../components/TransparentNavbar";
 
 const Services = () => {
   return (
     <motion.div
-      className="relative overflow-hidden mt-68 md:mt-54"
+      className="relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
+       <TransparentNavbar/>
       {/* ✅ Reusable Header Component */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center  lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center  lg:justify-between mb-10 px-4">
         <PageHeader
           title="Our Services"
           subHeading="OUR COMMITMENT TO QUALITY SERVICE"

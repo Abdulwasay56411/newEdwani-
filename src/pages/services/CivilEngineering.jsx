@@ -5,12 +5,13 @@ import PageHeader from "../../components/PageHeader";
 
 const CivilEngineering = () => {
   return (
-    <div className="relative mt-54 md:mt-40">
+    <div className="relative">
       {/* ✅ Reusable Header */}
+      <TransparentNavbar/>
       <PageHeader/>
       <div className="bg-gray-50">
         {/* Content Section */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="container mx-auto px-4 py-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>

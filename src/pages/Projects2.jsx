@@ -3,17 +3,19 @@ import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader"; // ✅ Import new reusable header
 import ProjectStory from "../components/Project/ProjectStory";
 import ProjectCard2 from "../components/Project/ProjectCard2";
+import TransparentNavbar from "../components/TransparentNavbar";
 
 const Projects2 = () => {
   return (
     <motion.div
-      className="relative overflow-hidden mt-44"
+      className="relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       {/* ✅ Reusable Header Component */}
+      <TransparentNavbar/>
       <PageHeader/>
 
       {/* Project Story Section */}

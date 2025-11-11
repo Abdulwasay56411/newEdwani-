@@ -1,12 +1,14 @@
 import React from "react";
 import PageHeader from "../components/PageHeader"; //  Reusable Header
 import ContactSection from "../components/ContactSection";
+import TransparentNavbar from "../components/TransparentNavbar";
 
 const ContactUs = () => {
   return (
-    <div className="relative mt-68 md:mt-54">
+    <div className="relative">
+         <TransparentNavbar/>
       {/* Reusable Page Header */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center  lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center  lg:justify-between mb-10 px-4">
         <PageHeader
           title="Contact Us"
           subHeading="YOUR NEXT PROJECT STARTS HERE"

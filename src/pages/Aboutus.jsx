@@ -6,19 +6,21 @@ import VisionAndValues from "../components/About/VisionAndValues";
 import SafetyStandards from "../components/About/SafetyStandards";
 import Stats from "../components/About/Stats";
 import BestEngineers from "../components/About/BestEngineers";
-import PageHeader from "../components/PageHeader"; // ✅ Import PageHeader
+import PageHeader from "../components/PageHeader"; //  Import PageHeader
+import TransparentNavbar from "../components/TransparentNavbar";
 
 const Aboutus = () => {
   return (
     <motion.div
-      className="relative overflow-hidden mt-68 md:mt-54"
+      className="relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
+           <TransparentNavbar/>
       {/* ✅ Reusable Header Component */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between 2xl:justify-center mb-10 px-4">
+      <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center lg:justify-between 2xl:justify-center mb-10 px-4">
         <div className="order-2 lg:order-1">
         <PageHeader
           title="About Us"

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import TransparentNavbar from "./TransparentNavbar";
 
 const PageHeader = ({ title, subtitle, subHeading }) => {
   return (
@@ -44,9 +43,6 @@ const PageHeader = ({ title, subtitle, subHeading }) => {
         </div> */}
 
         {/* Navbar */}
-        <div className="w-full relative z-20">
-          <TransparentNavbar />
-        </div>
 
         {/* Hero Text */}
         <motion.div

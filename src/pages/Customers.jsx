@@ -2,18 +2,20 @@ import React from "react";
 import { motion } from "framer-motion";
 import OurClients from "../components/About/OurClients";
 import PageHeader from "../components/PageHeader"; // ✅ Import Reusable Header
+import TransparentNavbar from "../components/TransparentNavbar";
 
 const Customers = () => {
   return (
     <motion.div
-      className="relative overflow-hidden  mt-68 md:mt-54"
+      className="relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
+      <TransparentNavbar/>
       {/* ✅ Reusable Page Header */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center lg:justify-between mb-10 px-4">
         <PageHeader
           title="Our Customers"
           subHeading="BUILDING LASTING PARTNERSHIPS"

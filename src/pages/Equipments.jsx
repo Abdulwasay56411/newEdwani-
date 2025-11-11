@@ -5,6 +5,7 @@ import ConstructionEquipment from "../components/Equipment/ConstructionEquipment
 import ConstructionMaterials from "../components/Equipment/ConstructionMaterials";
 import EquipmentTable from "../components/Equipment/EquipmentTable";
 import LastSection from "../components/Equipment/LastSection";
+import TransparentNavbar from "../components/TransparentNavbar";
 
 // ===== Animation Variants for Reuse =====
 const fadeInUp = {
@@ -26,6 +27,7 @@ const Equipments = () => {
       transition={{ duration: 1 }}
     >
       {/* ✅ Reusable Page Header */}
+      <TransparentNavbar/>
       <PageHeader
         title="Equipment / Materials"
         subtitle="Edwani Contracting"

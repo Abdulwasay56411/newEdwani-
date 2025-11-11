@@ -2,11 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import QHSECommitment from "../../components/QHSE/QHSECommitment";
 import PageHeader from "../../components/PageHeader"; // ✅ Import Here
+import TransparentNavbar from "../../components/TransparentNavbar";
 
 const Commitment = () => {
   return (
-    <div className="relative mt-44 md:mt-20">
+    <div className="relative">
       {/* ✅ Reusable Page Header Component */}
+      <TransparentNavbar/>
       <PageHeader/>
 
       {/* ✅ Content Section */}

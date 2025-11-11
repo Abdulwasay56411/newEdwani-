@@ -6,8 +6,9 @@ import PageHeader from "../../components/PageHeader"; // ✅ ADD THIS
 
 const Certifications = () => {
   return (
-    <div className="relative mt-44 md:mt-20">
+    <div className="relative">
       {/* ✅ Reusable Page Header Component */}
+      <TransparentNavbar/>
       <PageHeader/>
 
       {/* Content Section */}

@@ -1,18 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 import PageHeader from "../../components/PageHeader"; // ✅ Reusable Header
-
 import QHSECommitment from "../../components/QHSE/QHSECommitment";
 import QualityPolicy from "../../components/QHSE/QualityPolicy";
 import HealthSafetyPolicy from "../../components/QHSE/HealthSafetyPolicy";
 import EnvironmentalPolicy from "../../components/QHSE/EnvironmentalPolicy";
 import AreasOfCertification from "../../components/QHSE/AreasOfCertification";
 import AwardsRecognition from "../../components/QHSE/AwardsRecognition";
+import TransparentNavbar from "../../components/TransparentNavbar";
 
 const Qhse = () => {
   return (
-    <div className="relative mt-68 md:mt-54">
+    <div className="relative">
+       <TransparentNavbar/>
       {/* ✅ Reusable Page Header */}
       <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center lg:justify-between mb-10 px-4">
         <PageHeader

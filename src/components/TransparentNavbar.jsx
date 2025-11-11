@@ -119,9 +119,9 @@ const TransparentNavbar = () => {
   };
 
   return (
-    <div className="w-full bg-transparent fixed top-0 left-0 z-[1000]">
-      {/* Enhanced Top Links Bar - Professional Mobile Design */}
-      <div className="w-full bg-gradient-to-r from-[#2387C0] to-[#2a95d6] py-2 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+    <div className="w-full bg-transparent">
+      {/* 1. Enhanced Top Links Bar (THIS REMAINS FIXED) */}
+      <div className="w-full fixed top-0 left-0 z-[1000] bg-gradient-to-r from-[#2387C0] to-[#2a95d6] py-2 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="w-full">
           {/* Desktop & Tablet Top Links */}
           <div className="hidden md:flex justify-between items-center text-white">
@@ -169,7 +169,7 @@ const TransparentNavbar = () => {
             </div>
           </div>
 
-          {/* Mobile Top Links */}
+          {/* Mobile Top Links - Height is approximately 115px */}
           <div className="md:hidden flex flex-col items-center text-white py-3 space-y-3">
             {/* Email */}
             <div className="flex items-center space-x-2 text-sm font-medium">
@@ -217,10 +217,17 @@ const TransparentNavbar = () => {
         </div>
       </div>
 
-      {/* Main Navigation Bar */}
-      <div className="w-full bg-white/98 backdrop-blur-lg shadow-lg border-b border-gray-100">
+      {/* 2. Spacer Div (Required to push content down below the fixed Top Bar) */}
+      {/* Mobile: 115px height, Desktop/Tablet: 40px height */}
+      <div className="h-[115px] md:h-[40px] w-full"></div>
+
+      {/* 3. Main Navigation Bar - NOW SCROLLABLE */}
+      <div 
+        // Removed fixed, top-[...], and z-[999] classes 
+        className="w-full bg-white/98 backdrop-blur-lg shadow-lg border-b border-gray-100 transition-all duration-300 relative z-[999]"
+      >
         <div className="w-full py-2 px-4 sm:px-6 lg:px-8 xl:px-6 2xl:px-14">
-          {/* ===== Desktop Navbar (1024px and above) - Fixed Spacing ===== */}
+          {/* ===== Desktop Navbar (1024px and above) ===== */}
           <nav className="hidden xl:flex items-center justify-between py-3">
             {/* Logo - Left Side with proper spacing */}
             <div
@@ -259,7 +266,7 @@ const TransparentNavbar = () => {
                       <div className="flex items-center">
                         <div
                           onClick={() => handleMainItemClick(link)}
-                          className={`flex items-center gap-1 text-[15px] lg:text-[16px] xl:text-[17px] py-2 font-semibold cursor-pointer transition-all duration-300 hover:scale-105 whitespace-nowrap ${
+                          className={`flex items-center gap-1 text-[15px] lg:text-[16px] xl:text-[17px] py-2 font-bold cursor-pointer transition-all duration-300 hover:scale-105 whitespace-nowrap ${
                             isDropdownActive(link.name)
                               ? "text-[#2387C0]"
                               : "text-[#171717] hover:text-[#2387C0]"
@@ -288,7 +295,7 @@ const TransparentNavbar = () => {
                     ) : (
                       <div
                         onClick={() => handleNavigation(link.path)}
-                        className={`text-[15px] lg:text-[16px] xl:text-[17px] font-semibold cursor-pointer transition-all duration-300 hover:scale-105 whitespace-nowrap ${
+                        className={`text-[15px] lg:text-[16px] xl:text-[17px] font-bold cursor-pointer transition-all duration-300 hover:scale-105 whitespace-nowrap ${
                           isActivePath(link.path)
                             ? "text-[#2387C0]"
                             : "text-[#171717] hover:text-[#2387C0]"
@@ -450,7 +457,7 @@ const TransparentNavbar = () => {
           </nav>
 
           {/* ===== Mobile Navbar (below 768px) ===== */}
-          <nav className="flex lg:hidden items-center justify-between py-3">
+          <nav className="flex lg:hidden mt-4 items-center justify-between py-3">
             {/* Mobile Menu Button - Left Side */}
             <div
               onClick={() => setMenuOpen(!menuOpen)}
@@ -489,7 +496,7 @@ const TransparentNavbar = () => {
         </div>
       </div>
 
-      {/* ===== Enhanced Mobile Menu ===== */}
+      {/* ===== Enhanced Mobile Menu (This is always fixed) ===== */}
       <div
         className={`xl:hidden fixed inset-0 z-[9999] transition-all duration-500 ease-in-out ${
           menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -534,7 +541,8 @@ const TransparentNavbar = () => {
           </div>
 
           {/* Enhanced Menu Items */}
-          <div className="overflow-y-auto py-6">
+          <div className="overflow-y-auto py-6 h-[calc(100vh-100px)]"> 
+            {/* Added height limit for better scrolling */}
             <div className="space-y-2 px-4">
               {mainLinks.map((link, index) => (
                 <div key={index} className="group">
