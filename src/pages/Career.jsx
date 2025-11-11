@@ -37,9 +37,10 @@ const Career = () => {
           subHeading="CAREERS THAT SHAPE THE FUTURE"
           subtitle="Join our team and be part of a dynamic, innovative and growth-driven organization. We are always looking for talented and motivated individuals who are passionate about making an impact. At our company, you’ll find opportunities to grow professionally, work on challenging projects and contribute to a culture of excellence, collaboration and continuous learning. Your skills, ideas and dedication are valued, and together we build solutions that shape the future of construction and infrastructure."
         />
-        <div>
+        <div className="relative mt-10  inline-block">
+        <div className="absolute top-3 -left-2 w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
           <img
-            className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg shadow-md"
+            className="relative w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1"
             src="/careerbg.jpg"
           />
         </div>

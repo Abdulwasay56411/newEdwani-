@@ -25,8 +25,9 @@ const Projects = () => {
 
         />
         </div>
-        <div className="order-1 mb-5 lg:order-2">
-          <img src="/projectbg.jpg" className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg shadow-md" />
+        <div className="order-1 mb-5 lg:order-2 relative inline-block">
+        <div className="absolute top-3 -left-2 w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+          <img src="/projectbg.jpg" className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1 relative" />
         </div>
       </div>
 

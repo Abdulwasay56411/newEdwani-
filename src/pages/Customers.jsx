@@ -21,9 +21,10 @@ const Customers = () => {
           subHeading="BUILDING LASTING PARTNERSHIPS"
           subtitle="Trusted by a diverse range of clients, we deliver innovative and reliable construction and infrastructure solutions that exceed expectations. Our commitment to quality, safety and excellence has earned us long-lasting partnerships with leading organizations, businesses and institutions. Every project we undertake reflects our dedication to creating impactful, sustainable results and strengthening the success of our valued customers."
         />
-        <div>
+        <div className="relative mt-10  inline-block">
+        <div className="absolute top-3 -left-2 w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
           <img
-            className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg shadow-md"
+            className="relative w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1"
             src="/bgservices.png"
           />
         </div>
