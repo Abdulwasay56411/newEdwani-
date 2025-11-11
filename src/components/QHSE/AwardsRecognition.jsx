@@ -97,7 +97,7 @@ const AwardsRecognition = () => {
     <div className="bg-white">
       {/* Main Heading Section - Only One Heading */}
       <section className="relative bg-white text-gray-900">
-        <div className="flex justify-center items-center text-center lg:text-left flex-wrap lg:flex-nowrap 2xl:justify-center lg:justify-between">
+        <div className="flex justify-center items-center text-center lg:text-left flex-wrap lg:flex-nowrap mb-5 gap-10 px-4">
           <div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
               Awards & Recognition

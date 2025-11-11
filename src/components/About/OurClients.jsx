@@ -9,77 +9,77 @@ const OurClients = () => {
     {
       id: 1,
       name: "Royal Commission for Jubail and Yanbu",
-      logo: "/logo1.png",
+      logo: "/client 1.png",
     },
     {
       id: 2,
       name: "Saudi Aramco",
-      logo: "/logo2.png",
+      logo: "/client 2.png",
     },
     {
       id: 3,
       name: "NEOM",
-      logo: "/3.png",
+      logo: "/client 3.png",
     },
     {
       id: 4,
       name: "SABIC",
-      logo: "/4.png",
+      logo: "/client 4.png",
     },
     {
       id: 5,
       name: "Ministry of Defense",
-      logo: "/15.png",
+      logo: "/client 5.png",
     },
     {
       id: 6,
       name: "Ministry of Interior",
-      logo: "/13.png",
+      logo: "/client 6.png",
     },
     {
       id: 7,
       name: "Red Sea Global",
-      logo: "/7.png",
+      logo: "/client 7.png",
     },
     {
       id: 8,
       name: "Diriyah Gate Development Authority",
-      logo: "/8.png",
+      logo: "/client 8.png",
     },
     {
       id: 9,
       name: "Royal Commission for AlUla",
-      logo: "/9.png",
+      logo: "/client 9.png",
     },
     {
       id: 10,
       name: "Public Investment Fund",
-      logo: "/10.png",
+      logo: "/client 10.png",
     },
     {
       id: 11,
       name: "Ministry of Housing",
-      logo: "/12.png",
+      logo: "/client 11.png",
     },
     {
       id: 12,
       name: "Saudi Electricity Company",
-      logo: "/14.png",
+      logo: "/client 12.png",
     },
     {
       id: 13,
       name: "National Water Company",
-      logo: "/15.png",
+      logo: "/client 13.png",
     },
     {
       id: 14,
       name: "Saudi Arabian Airlines",
-      logo: "/2.png",
+      logo: "/client 14.png",
     },
     {
       id: 15,
       name: "King Abdullah University",
-      logo: "/1.png",
+      logo: "/client 15.png",
     },
   ];
 
@@ -176,17 +176,17 @@ const OurClients = () => {
                 whileHover="hover"
                 className="flex items-center justify-center"
               >
-                <div className="bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-100 sm:border-gray-200 p-3 sm:p-4 lg:p-6 aspect-square flex items-center justify-center w-full transition-all duration-300 hover:shadow-lg sm:hover:shadow-xl mx-auto max-w-[140px] sm:max-w-none">
-                  <div className="w-full h-full flex items-center justify-center p-1 sm:p-2">
+                <div className="bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg border border-gray-100 sm:border-gray-200 p-3 sm:p-4 lg:p-6 aspect-square flex items-center justify-center w-full h-[110px] transition-all duration-300 hover:shadow-lg sm:hover:shadow-xl mx-auto max-w-[120px] sm:max-w-none">
+                  <div className=" flex items-center justify-center p-1 sm:p-2">
                     <img
                       src={client.logo}
                       alt={client.name}
-                      className="w-full h-full object-contain transition-all duration-300"
+                      className="w-[212px] h-[110px] object-contain transition-all duration-300"
                       style={{
                         maxWidth: "100%",
                         maxHeight: "100%",
                         width: "auto",
-                        height: "auto",
+                        height: "105px",
                       }}
                       onError={(e) => {
                         e.target.src = `https://via.placeholder.com/120x80/f8fafc/2387C0?text=${

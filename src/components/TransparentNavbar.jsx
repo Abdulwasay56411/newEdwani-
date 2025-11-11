@@ -332,7 +332,7 @@ const TransparentNavbar = () => {
             <div className="flex-shrink-0 ml-8">
               <button
                 onClick={() => navigate("/contact")}
-                className="px-6 lg:px-7 xl:px-8 py-3 lg:py-3.5 xl:py-4 text-white bg-gradient-to-r from-[#2387C0] to-[#2a95d6] font-semibold text-[14px] lg:text-[15px] xl:text-[16px] rounded-xl hover:from-[#1e76a9] hover:to-[#2387C0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 whitespace-nowrap"
+                className="px-6 lg:px-6 xl:px-8 py-3 lg:py-3.5 xl:py-4 text-white bg-gradient-to-r from-[#2387C0] to-[#2a95d6] font-semibold text-[14px] lg:text-[15px] xl:text-[16px] rounded-xl hover:from-[#1e76a9] hover:to-[#2387C0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 whitespace-nowrap"
               >
                 Contact Us
               </button>
@@ -347,8 +347,8 @@ const TransparentNavbar = () => {
               className="flex items-center cursor-pointer select-none flex-shrink-0 group min-w-0"
             >
               <img
-                width={90}
-                height={90}
+                width={70}
+                height={70}
                 src="/icon1.png"
                 alt="Edwani Contracting"
                 className="transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
@@ -361,9 +361,9 @@ const TransparentNavbar = () => {
             </div>
 
             {/* Navigation Links - Adjusted for tablet */}
-            <div className="flex items-cente text-base justify-center flex-1 min-w-0 mx-4">
-              <ul className="flex items-center justify-center space-x-6">
-                {mainLinks.slice(0, 5).map(
+            <div className="flex items-cente text-base font-bold  justify-center flex-1 min-w-0 mx-4">
+              <ul className="flex items-center justify-center space-x-4">
+                {mainLinks.slice(0, 7).map(
                   (
                     link,
                     index // Show fewer items on tablet

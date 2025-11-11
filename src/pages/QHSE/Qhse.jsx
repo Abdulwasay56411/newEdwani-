@@ -14,7 +14,7 @@ const Qhse = () => {
     <div className="relative">
        <TransparentNavbar/>
       {/* ✅ Reusable Page Header */}
-      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center 2xl:justify-center lg:justify-between mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <PageHeader
           title="QHSE"
           subHeading="EXCELLENCE IN QUALITY, SAFETY & ENVIRONMENT"
