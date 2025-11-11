@@ -105,8 +105,8 @@ const HealthSafetyPolicy = () => {
               protecting company assets.
             </p>
           </div>
-          <div className="relative mt-10 inline-block">
-          <div className="absolute top-3 -left-2 w-[400px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+          <div className="relative mt-10 mx-2 inline-block">
+          <div className="absolute top-3 -left-2 w-full mx-2 max-w-[400px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
             <img
                 src="/qshe 4.png"
               className="w-[400px] h-[300px] mt-5 object-cover rounded-lg relative rotate-1"
