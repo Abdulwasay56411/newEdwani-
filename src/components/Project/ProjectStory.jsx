@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectStory = () => {
   return (
-    <div className="flex flex-wrap xl:flex-nowrap items-center justify-center">
+    <div className="flex pt-30 flex-wrap xl:flex-nowrap items-center justify-center">
       {/*  Image Section (xl:order-1 -> Left side on large screens) */}
       <div className="relative w-full lg:w-[659px] flex-shrink-0 mt-8 lg:mt-0 xl:order-1">
         {/* Main Image */}

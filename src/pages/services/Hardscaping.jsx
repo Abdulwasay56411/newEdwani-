@@ -14,7 +14,9 @@ const Hardscaping = () => {
     <div className="relative">
       {/* ✅ Reusable Header Component */}
       <TransparentNavbar/>
-      <PageHeader/>
+      <div className="pt-30">
+        <PageHeader />
+      </div>
 
       {/* ✅ Content Section (unchanged) */}
       <div className=" bg-gray-50 ">

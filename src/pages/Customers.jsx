@@ -22,7 +22,7 @@ const Customers = () => {
     >
       <TransparentNavbar/>
       {/* ✅ Reusable Page Header */}
-      <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
+      <div className="flex flex-wrap  pt-30  lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <PageHeader
           title="Our Customers"
           subHeading="BUILDING LASTING PARTNERSHIPS"

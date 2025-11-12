@@ -100,7 +100,7 @@ const HealthSafetyPolicy = () => {
     <div className="bg-white">
       {/* Main Heading Section - Only One Heading */}
       <section className="relative bg-white text-gray-900">
-        <div className="flex justify-center items-center text-center lg:text-left flex-wrap lg:flex-nowrap gap-10 mb-5 px-4">
+        <div className="flex justify-center  pt-20  items-center text-center lg:text-left flex-wrap lg:flex-nowrap gap-10 mb-5 px-4">
           <div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
               Health & Safety Policy

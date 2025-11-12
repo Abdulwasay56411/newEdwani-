@@ -3,18 +3,19 @@ import PageHeader from "../../components/PageHeader";
 import TransparentNavbar from "../../components/TransparentNavbar";
 
 const ConstructionMaterial = () => {
-
   const [isImageLoaded, setIsImageLoaded] = useState(false);
-            
-              const handleImageLoad = () => {
-                setIsImageLoaded(true);
-              }; 
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
 
   return (
     <div className="relative">
       {/* ✅ Reusable Header Component */}
-      <TransparentNavbar/>
-      <PageHeader/>
+      <TransparentNavbar />
+      <div className="pt-30">
+        <PageHeader />
+      </div>
 
       {/* ✅ Content Section (unchanged) */}
       <div className=" bg-gray-50 ">
@@ -50,43 +51,33 @@ const ConstructionMaterial = () => {
               </div>
 
               <div className="relative mx-2 inline-block">
-             {isImageLoaded && (
+                {isImageLoaded && (
                   <div className="absolute top-3 -left-2 w-full mx-2  max-w-[520px] h-[410px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
-             )}
+                )}
                 <img
-                   src="/services 2.png"
+                  src="/services 2.png"
                   className="w-[500px] h-[400px] mt-5 mr-4 object-cover rounded-lg relative rotate-1"
                   onLoad={handleImageLoad}
                 />
               </div>
-
             </div>
-              <div className="w-full my-10 bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-bold text-[#2387C0] mb-6">
-                  Material Categories
-                </h3>
+            <div className="w-full my-10 bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-[#2387C0] mb-6">
+                Material Categories
+              </h3>
 
-                {[
-                  [
-                    "Structural Materials",
-                    "Steel, concrete, reinforcement bars",
-                  ],
-                  ["Finishing Materials", "Tiles, paints, flooring materials"],
-                  ["MEP Materials", "Pipes, cables, fixtures, fittings"],
-                  [
-                    "Specialty Materials",
-                    "Waterproofing, insulation, adhesives",
-                  ],
-                ].map(([title, desc], i) => (
-                  <div
-                    key={i}
-                    className="border-l-4 border-[#2387C0] pl-4 py-2"
-                  >
-                    <h4 className="font-semibold text-gray-900">{title}</h4>
-                    <p className="text-gray-600">{desc}</p>
-                  </div>
-                ))}
-              </div>
+              {[
+                ["Structural Materials", "Steel, concrete, reinforcement bars"],
+                ["Finishing Materials", "Tiles, paints, flooring materials"],
+                ["MEP Materials", "Pipes, cables, fixtures, fittings"],
+                ["Specialty Materials", "Waterproofing, insulation, adhesives"],
+              ].map(([title, desc], i) => (
+                <div key={i} className="border-l-4 border-[#2387C0] pl-4 py-2">
+                  <h4 className="font-semibold text-gray-900">{title}</h4>
+                  <p className="text-gray-600">{desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

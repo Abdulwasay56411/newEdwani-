@@ -46,7 +46,7 @@ const PageHeader = ({ title, subtitle, subHeading }) => {
 
         {/* Hero Text */}
         <motion.div
-          className="flex-1 flex justify-center items-center px-4 relative z-10"
+          className="flex-1 flex  justify-center items-center px-4 relative z-10"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}

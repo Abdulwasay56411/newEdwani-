@@ -32,7 +32,7 @@ const ElectricalWorks = () => {
     >
       {/* ✅ Reusable Page Header */}
       <TransparentNavbar />
-      <div className="flex  flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
+      <div className="flex  flex-wrap  pt-30  lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <div className="order-2 lg:order-1">
           <PageHeader
             title="Electrical Works"
