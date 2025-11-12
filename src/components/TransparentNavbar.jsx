@@ -157,7 +157,7 @@ const TransparentNavbar = () => {
       {/* 3. Main Navigation Bar - NOW SCROLLABLE */}
       <div 
         // Removed fixed, top-[...], and z-[999] classes 
-        className="w-full bg-white/98 backdrop-blur-lg shadow-lg border-b border-gray-100 transition-all duration-300 relative z-[999]"
+        className="w-full bg-white/98 fixed backdrop-blur-lg shadow-lg border-b border-gray-100 transition-all duration-300  z-[999]"
       >
         <div className="w-full py-2 px-4 sm:px-6 lg:px-8 xl:px-6 2xl:px-14">
           {/* ===== Desktop Navbar (1024px and above) ===== */}
