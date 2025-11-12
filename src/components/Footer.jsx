@@ -1,5 +1,6 @@
 import React from "react";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -35,41 +36,54 @@ const Footer = () => {
         </div>
 
         {/* Column 2 - Company */}
-        <div className="lg:justify-self-center">
+        <div className="lg:justify-self-center select-none">
           <h3 className="text-[#2387C0] text-lg sm:text-xl font-semibold uppercase mb-5">
             Company
           </h3>
-          <ul className="space-y-3 text-gray-400 text-base sm:text-lg">
-            {[
-              "About",
-              "Privacy Policy",
-              "Terms & Conditions",
-              "Services",
-              "Contact",
-            ].map((item) => (
-              <li
-                key={item}
-                className="hover:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 3 - Projects */}
-        <div className="lg:justify-self-center">
-          <h3 className="text-[#2387C0] text-lg sm:text-xl font-semibold uppercase mb-5">
-            Projects
-          </h3>
-          <ul className="space-y-3 text-gray-400 text-base sm:text-lg">
-            {["Commercial", "Residential", "Industrial", "Infrastructure"].map(
+          <ul className="space-y-3 text-gray-400 text-base sm:text-lg select-none">
+            {["About", "Services", "Customers", "QHSE"].map(
               (item) => (
                 <li
                   key={item}
                   className="hover:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
                 >
-                  {item}
+                  <Link to={`/${item.toLowerCase().replace("", "")}`}>
+                    {item}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+
+        {/* Column 3 - Projects */}
+        <div className="lg:justify-self-center select-none">
+          <h3 className="text-[#2387C0] text-lg sm:text-xl font-semibold uppercase mb-5">
+            Services
+          </h3>
+          <ul className="space-y-3 text-gray-400 text-base sm:text-lg">
+            {["Civil", "Landscaping", "Hardscaping", "Safety Consultancy"].map(
+              (item) => (
+                <li
+                  key={item}
+                  className="hover:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
+                >
+                  <Link
+                    to={
+                      item === "Civil"
+                        ? "/services/civil"
+                        : item === "Landscaping"
+                        ? "/services/landscaping"
+                        : item === "Hardscaping"
+                        ? "/services/hardscaping"
+                        : item === "Safety Consultancy"
+                        ? "/services/safety"
+                        : "/services"
+                    }
+                    className="block"
+                  >
+                    {item}
+                  </Link>
                 </li>
               )
             )}
@@ -77,17 +91,39 @@ const Footer = () => {
         </div>
 
         {/* Column 4 - Resources */}
-        <div className="lg:justify-self-end">
+        <div className="lg:justify-self-end select-none">
           <h3 className="text-[#2387C0] text-lg sm:text-xl font-semibold uppercase mb-5">
-            Resources
+            QHSE
           </h3>
           <ul className="space-y-3 text-gray-400 text-base sm:text-lg">
-            {["Guides", "Supply", "Tools", "Support"].map((item) => (
+            {[
+              "Our Commitment",
+              "Quality Policy",
+              "Environmental Policy",
+              "Areas of Certification",
+            ].map((item) => (
               <li
                 key={item}
                 className="hover:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
               >
-                {item}
+                <Link
+                  to={
+                    item === "Our Commitment"
+                      ? "/qhse/commitment"
+                      : item === "Quality Policy"
+                      ? "/qhse/quality-policy"
+                      : item === "Environmental Policy"
+                      ? "/qhse/environmental"
+                      : 
+                      item === "Areas of Certification"
+                      ? "/qhse/certification"
+                      : 
+                        "/qhse"
+                  }
+                  className="block"
+                >
+                  {item}
+                </Link>
               </li>
             ))}
           </ul>

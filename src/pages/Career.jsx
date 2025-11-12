@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import PageHeader from "../components/PageHeader"; // ✅ Reusable Header
@@ -21,6 +21,12 @@ const fadeInUp = {
 };
 
 const Career = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <motion.div
       className="relative"
@@ -29,7 +35,7 @@ const Career = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-       <TransparentNavbar/>
+      <TransparentNavbar />
       {/* ✅ Reusable Page Header */}
       <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <PageHeader
@@ -38,10 +44,13 @@ const Career = () => {
           subtitle="Join our team and be part of a dynamic, innovative and growth-driven organization. We are always looking for talented and motivated individuals who are passionate about making an impact. At our company, you’ll find opportunities to grow professionally, work on challenging projects and contribute to a culture of excellence, collaboration and continuous learning. Your skills, ideas and dedication are valued, and together we build solutions that shape the future of construction and infrastructure."
         />
         <div className="relative mt-10 mx-2 inline-block">
-        <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+          {isImageLoaded && (
+            <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+          )}
           <img
             className="relative w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1"
             src="/careerbg.jpg"
+            onLoad={handleImageLoad}
           />
         </div>
       </div>

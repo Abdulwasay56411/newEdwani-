@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../../components/PageHeader";
 import TransparentNavbar from "../../components/TransparentNavbar";
 
 const EquipmentRental = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <div className="relative">
       {/* ✅ Reusable PageHeader Component */}
-      <TransparentNavbar/>
-      <PageHeader/>
+      <TransparentNavbar />
+      <PageHeader />
 
       {/* ✅ Content Section (unchanged) */}
       <div className=" bg-gray-50 ">
@@ -43,41 +49,39 @@ const EquipmentRental = () => {
               </div>
 
               <div className="relative mx-2 inline-block">
-              <div className="absolute top-3 -left-2 w-full mx-2  max-w-[520px] h-[410px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+              {isImageLoaded && (
+                   <div className="absolute top-3 -left-2 w-full mx-2  max-w-[520px] h-[410px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+              )}
                 <img
-                   src="/services 3.png"
+                  src="/services 3.png"
                   className="w-[500px] h-[400px] mt-5 mr-4 object-cover rounded-lg relative rotate-1"
+                  onLoad={handleImageLoad}
                 />
               </div>
-
-
             </div>
-              <div className=" w-full my-10 bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-bold text-[#2387C0] mb-6">
-                  Our Equipment Range
-                </h3>
+            <div className=" w-full my-10 bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-[#2387C0] mb-6">
+                Our Equipment Range
+              </h3>
 
-                {[
-                  ["Heavy Machinery", "Excavators, bulldozers, loaders"],
-                  [
-                    "Construction Equipment",
-                    "Cranes, concrete mixers, compactors",
-                  ],
-                  ["Power Tools", "Generators, compressors, welding machines"],
-                  [
-                    "Specialized Equipment",
-                    "Scaffolding, formwork, safety equipment",
-                  ],
-                ].map(([title, desc], i) => (
-                  <div
-                    key={i}
-                    className="border-l-4 border-[#2387C0] pl-4 py-2"
-                  >
-                    <h4 className="font-semibold text-gray-900">{title}</h4>
-                    <p className="text-gray-600">{desc}</p>
-                  </div>
-                ))}
-              </div>
+              {[
+                ["Heavy Machinery", "Excavators, bulldozers, loaders"],
+                [
+                  "Construction Equipment",
+                  "Cranes, concrete mixers, compactors",
+                ],
+                ["Power Tools", "Generators, compressors, welding machines"],
+                [
+                  "Specialized Equipment",
+                  "Scaffolding, formwork, safety equipment",
+                ],
+              ].map(([title, desc], i) => (
+                <div key={i} className="border-l-4 border-[#2387C0] pl-4 py-2">
+                  <h4 className="font-semibold text-gray-900">{title}</h4>
+                  <p className="text-gray-600">{desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

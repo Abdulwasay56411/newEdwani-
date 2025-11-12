@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PageHeader from "../../components/PageHeader"; // ✅ Reusable Header
 import QHSECommitment from "../../components/QHSE/QHSECommitment";
@@ -10,9 +10,15 @@ import AwardsRecognition from "../../components/QHSE/AwardsRecognition";
 import TransparentNavbar from "../../components/TransparentNavbar";
 
 const Qhse = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <div className="relative">
-       <TransparentNavbar/>
+      <TransparentNavbar />
       {/* ✅ Reusable Page Header */}
       <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <PageHeader
@@ -20,11 +26,14 @@ const Qhse = () => {
           subHeading="EXCELLENCE IN QUALITY, SAFETY & ENVIRONMENT"
           subtitle="At the core of our operations is an unwavering commitment to Quality, Health, Safety and Environmental excellence. We implement stringent QHSE standards across all our projects to ensure the wellbeing of our workforce, the protection of the environment and the delivery of superior quality outcomes. By fostering a culture of safety, accountability and continuous improvement, we not only meet regulatory requirements but also exceed industry benchmarks, reinforcing our reputation as a responsible and reliable construction partne"
         />
-        <div className="relative mx-2 inline-block">
-        <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+        <div className="relative mt-10 mx-2 inline-block">
+          {isImageLoaded && (
+            <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+          )}
           <img
             className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1 relative"
             src="/qshebg.png"
+            onLoad={handleImageLoad}
           />
         </div>
       </div>

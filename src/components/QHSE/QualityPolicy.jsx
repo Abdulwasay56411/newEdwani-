@@ -5,11 +5,17 @@ import {
   ShieldCheckIcon,
   UsersIcon,
 } from "@heroicons/react/24/solid";
-import React from "react";
+import React, { useState } from "react";
 import { FaHandshake } from "react-icons/fa";
 
 const QualityPolicy = () => {
   const primaryColor = "#2387C0";
+
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
+        
+          const handleImageLoad = () => {
+            setIsImageLoaded(true);
+          };
 
   const policyPoints = [
     {
@@ -54,10 +60,13 @@ const QualityPolicy = () => {
           </p>
         </div>
         <div className="relative mt-10  inline-block">
-        <div className="absolute top-3 -left-2 w-full mx-2 max-w-[400px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+         {isImageLoaded && (
+            <div className="absolute top-3 -left-2 w-full mx-2 max-w-[400px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+         )}
               <img
                   src="/qshe 6.png"
                 className="w-[400px] h-[300px] mt-5 object-cover rounded-lg relative rotate-1"
+                onLoad={handleImageLoad}
               />
             </div>
             </div>

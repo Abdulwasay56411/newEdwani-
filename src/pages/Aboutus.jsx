@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Section2 from "../components/About/Section2";
 import SpecializationSection from "../components/About/SpecializationSection";
@@ -10,6 +10,12 @@ import PageHeader from "../components/PageHeader"; //  Import PageHeader
 import TransparentNavbar from "../components/TransparentNavbar";
 
 const Aboutus = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <motion.div
       className="relative overflow-hidden"
@@ -31,11 +37,13 @@ const Aboutus = () => {
         </div>
         <div className="order-1 mb-5 mt-10 lg:order-2 relative inline-block">
           {/* Shadow Background */}
-          <div className="absolute top-3 -left-2 w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
-
+          {isImageLoaded && (
+            <div className="absolute top-3 -left-2 w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+          )}
           <img
             className="relative w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-xl"
             src="/bgservices.png"
+            onLoad={handleImageLoad}
           />
         </div>
       </div>

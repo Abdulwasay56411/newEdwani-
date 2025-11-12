@@ -7,12 +7,7 @@ import {
   HiPhone,
 } from "react-icons/hi";
 import { useLocation, useNavigate } from "react-router-dom";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
+
 
 const TransparentNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -120,7 +115,7 @@ const TransparentNavbar = () => {
 
   return (
     <div className="w-full bg-transparent">
-      {/* 1. Enhanced Top Links Bar (THIS REMAINS FIXED) */}
+      
       <div className="w-full fixed top-0 left-0 z-[1000] bg-gradient-to-r from-[#2387C0] to-[#2a95d6] py-2 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="w-full">
           {/* Desktop & Tablet Top Links */}
@@ -131,46 +126,16 @@ const TransparentNavbar = () => {
                 <HiMail className="text-white/90 text-sm" />
                 <span>info@edwanicontracting.com</span>
               </span>
-              <span className="flex items-center space-x-2 text-sm lg:text-[15px] font-medium bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+            </div>
+          <div>
+          <span className="flex items-center space-x-2 text-sm lg:text-[15px] font-medium bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg">
                 <HiPhone className="text-white/90 text-sm" />
                 <span>+966-50-4393166</span>
               </span>
-            </div>
-
-            {/* Right Section - Social Icons */}
-            <div className="flex items-center space-x-3 lg:space-x-4">
-              <a
-                href="#"
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white/20 transition"
-              >
-                <FaFacebookF className="text-white text-[14px] lg:text-[17px]" />
-              </a>
-
-              <a
-                href="#"
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white/20 transition"
-              >
-                <FaTwitter className="text-white text-[14px] lg:text-[17px]" />
-              </a>
-
-              <a
-                href="#"
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white/20 transition"
-              >
-                <FaLinkedinIn className="text-white text-[14px] lg:text-[17px]" />
-              </a>
-
-              <a
-                href="#"
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white/20 transition"
-              >
-                <FaYoutube className="text-white text-[14px] lg:text-[17px]" />
-              </a>
-            </div>
           </div>
-
+          </div>
           {/* Mobile Top Links - Height is approximately 115px */}
-          <div className="md:hidden flex flex-col items-center text-white py-3 space-y-3">
+          <div className="md:hidden flex justify-between h-5 text-white py-3 space-y-3">
             {/* Email */}
             <div className="flex items-center space-x-2 text-sm font-medium">
               <HiMail className="text-white/90 text-lg" />
@@ -181,45 +146,13 @@ const TransparentNavbar = () => {
             <div className="flex items-center space-x-2 text-sm font-medium">
               <HiPhone className="text-white/90 text-lg" />
               <span>+966-50-4393166</span>
-            </div>
-
-            {/* Social Icons */}
-            <div className="flex items-center justify-center space-x-3 pt-1">
-              <a
-                href="#"
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white hover:text-[#2387C0] transition"
-              >
-                <FaFacebookF className="text-white text-[14px]" />
-              </a>
-
-              <a
-                href="#"
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white hover:text-[#2387C0] transition"
-              >
-                <FaTwitter className="text-white text-[14px]" />
-              </a>
-
-              <a
-                href="#"
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white hover:text-[#2387C0] transition"
-              >
-                <FaLinkedinIn className="text-white text-[14px]" />
-              </a>
-
-              <a
-                href="#"
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-lg hover:bg-white hover:text-[#2387C0] transition"
-              >
-                <FaYoutube className="text-white text-[14px]" />
-              </a>
-            </div>
+            </div>   
           </div>
         </div>
       </div>
 
-      {/* 2. Spacer Div (Required to push content down below the fixed Top Bar) */}
-      {/* Mobile: 115px height, Desktop/Tablet: 40px height */}
-      <div className="h-[115px] md:h-[40px] w-full"></div>
+      {/* Mobile: 50px height, Desktop/Tablet: 40px height */}
+      <div className="h-4 md:h-[40px] w-full"></div>
 
       {/* 3. Main Navigation Bar - NOW SCROLLABLE */}
       <div 
@@ -554,7 +487,7 @@ const TransparentNavbar = () => {
                         className="flex items-center justify-between p-3 cursor-pointer hover:bg-blue-50/50 transition-all duration-300"
                       >
                         <span
-                          className={`text-[15px] font-semibold ${
+                          className={`text-[15px] pl-2 font-semibold ${
                             isDropdownActive(link.name)
                               ? "text-[#2387C0]"
                               : "text-gray-800"
@@ -624,8 +557,8 @@ const TransparentNavbar = () => {
                       }`}
                     >
                       <div
-                        className={`w-1.5 h-1.5 rounded-full mr-2 transition-all duration-300 ${
-                          isActivePath(link.path) ? "bg-white" : "bg-gray-400"
+                        className={` rounded-full mr-2 transition-all duration-300 ${
+                          isActivePath(link.path) ? "bg-white" : ""
                         }`}
                       ></div>
                       <span className="text-[15px] font-semibold">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import TransparentNavbar from "../components/TransparentNavbar";
 import ProjectStory from "../components/Project/ProjectStory";
@@ -6,6 +6,13 @@ import ProjectCard from "../components/Project/ProjectCard";
 import PageHeader from "../components/PageHeader"; //  Import Reusable Header
 
 const Projects = () => {
+
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <motion.div
       className="relative overflow-hidden"
@@ -26,8 +33,10 @@ const Projects = () => {
         />
         </div>
         <div className="order-1 mb-5 mx-2 lg:order-2 relative inline-block">
-        <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
-          <img src="/projectbg.jpg" className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1 relative" />
+       {isImageLoaded &&(
+         <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+       )}
+          <img src="/projectbg.jpg" className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1 relative" onLoad={handleImageLoad} />
         </div>
       </div>
 

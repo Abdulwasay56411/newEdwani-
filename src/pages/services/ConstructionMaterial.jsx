@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../../components/PageHeader";
 import TransparentNavbar from "../../components/TransparentNavbar";
 
 const ConstructionMaterial = () => {
+
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+            
+              const handleImageLoad = () => {
+                setIsImageLoaded(true);
+              }; 
+
   return (
     <div className="relative">
       {/* ✅ Reusable Header Component */}
@@ -43,10 +50,13 @@ const ConstructionMaterial = () => {
               </div>
 
               <div className="relative mx-2 inline-block">
-              <div className="absolute top-3 -left-2 w-full mx-2  max-w-[520px] h-[410px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+             {isImageLoaded && (
+                  <div className="absolute top-3 -left-2 w-full mx-2  max-w-[520px] h-[410px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+             )}
                 <img
                    src="/services 2.png"
                   className="w-[500px] h-[400px] mt-5 mr-4 object-cover rounded-lg relative rotate-1"
+                  onLoad={handleImageLoad}
                 />
               </div>
 

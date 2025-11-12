@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
 import WhyChooseUs from "../components/Services/WhyChooseUs";
@@ -8,6 +8,13 @@ import MechanicalServices from "../components/MechanicalServices";
 import TransparentNavbar from "../components/TransparentNavbar";
 
 const Services = () => {
+
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <motion.div
       className="relative overflow-hidden"
@@ -25,10 +32,13 @@ const Services = () => {
           subtitle="Delivering comprehensive construction and infrastructure solutions across Saudi Arabia, we bring decades of hands-on experience, a highly skilled and certified team and an unwavering commitment to excellence. Our focus on quality, safety and client satisfaction ensures that every project is executed with precision, reliability and attention to detail, making us a trusted partner for businesses and communities seeking innovative and sustainable construction solutions."
         />
         <div className="relative mt-10 mx-2 inline-block">
-        <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+         {isImageLoaded && (
+                <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+         )}
           <img
             className="w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg relative rotate-1"
             src="/uzair.png"
+            onLoad={handleImageLoad}
           />
         </div>
       </div>
