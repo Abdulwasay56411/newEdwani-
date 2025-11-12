@@ -41,11 +41,11 @@ const Footer = () => {
             Company
           </h3>
           <ul className="space-y-3 text-gray-400 text-base sm:text-lg select-none">
-            {["About", "Services", "Customers", "QHSE"].map(
+            {["About", "Services", "Customer", "QHSE"].map(
               (item) => (
                 <li
                   key={item}
-                  className="hover:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-[#2387C0] active:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
                 >
                   <Link to={`/${item.toLowerCase().replace("", "")}`}>
                     {item}
@@ -66,7 +66,7 @@ const Footer = () => {
               (item) => (
                 <li
                   key={item}
-                  className="hover:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
+                  className="hover:text-[#2387C0] active:text-[#2387C0]  cursor-pointer transition-all duration-300 hover:translate-x-1"
                 >
                   <Link
                     to={
@@ -104,7 +104,7 @@ const Footer = () => {
             ].map((item) => (
               <li
                 key={item}
-                className="hover:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
+                className="hover:text-[#2387C0] active:text-[#2387C0]  cursor-pointer transition-all duration-300 hover:translate-x-1"
               >
                 <Link
                   to={
