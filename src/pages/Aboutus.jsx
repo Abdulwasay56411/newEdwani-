@@ -35,10 +35,10 @@ const Aboutus = () => {
             subHeading="Our CEO’s Commitment to Excellence"
           />
         </div>
-        <div className="order-1 mb-5 mt-10 lg:order-2 relative inline-block">
+        <div className="order-1 mb-5 mt-10 mx-2 lg:order-2 relative inline-block">
           {/* Shadow Background */}
           {isImageLoaded && (
-            <div className="absolute top-3 -left-2 w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+            <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
           )}
           <img
             className="relative w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-xl"
