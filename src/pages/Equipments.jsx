@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader"; // ✅ Reusable Header Component
 import ConstructionEquipment from "../components/Equipment/ConstructionEquipment";
@@ -18,6 +18,12 @@ const fadeInUp = {
 };
 
 const Equipments = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <motion.div
       className="relative"
@@ -27,12 +33,24 @@ const Equipments = () => {
       transition={{ duration: 1 }}
     >
       {/* ✅ Reusable Page Header */}
-      <TransparentNavbar/>
-      <PageHeader
-        title="Equipment / Materials"
-        subtitle="Edwani Contracting"
-        image="/bg-e.jpg"
-      />
+      <TransparentNavbar />
+      <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
+        <PageHeader
+          title="Equipment / Materials"
+          subHeading="Edwani Contracting"
+          subtitle="We’re here to help and answer any questions you may have. Whether you’re looking for more information about our services, projects or career opportunities, our team is ready to assist you. Get in touch with us through the form below, email or phone and we’ll ensure your inquiries are addressed promptly and efficiently. Your connection with us is important and we look forward to hearing from you."
+        />
+        <div className="relative mt-10 mx-2 inline-block">
+          {isImageLoaded && (
+            <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
+          )}
+          <img
+            className="relative w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1"
+            src="/bg-e.jpg"
+            onLoad={handleImageLoad}
+          />
+        </div>
+      </div>
 
       {/* ===== Section 1: Construction Equipment ===== */}
       <motion.section

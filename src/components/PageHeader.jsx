@@ -92,7 +92,7 @@ const PageHeader = ({ title, subtitle, subHeading }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <motion.div
+          {/* <motion.div
             className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center"
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -102,7 +102,7 @@ const PageHeader = ({ title, subtitle, subHeading }) => {
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </motion.div>
