@@ -37,8 +37,8 @@ const Equipments = () => {
       <div className="flex flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <PageHeader
           title="Equipment / Materials"
-          subHeading="Edwani Contracting"
-          subtitle="We’re here to help and answer any questions you may have. Whether you’re looking for more information about our services, projects or career opportunities, our team is ready to assist you. Get in touch with us through the form below, email or phone and we’ll ensure your inquiries are addressed promptly and efficiently. Your connection with us is important and we look forward to hearing from you."
+          subHeading="Reliable Equipment and Quality Materials for Every Project    "
+          subtitle="Edwani Contracting offers a comprehensive range of construction equipment and materials to meet the demands of projects of all scales. From heavy machinery rentals and sales to mechanical support services and maintenance, we provide reliable, high-quality solutions. Our materials portfolio includes backfill, soil, natural stones, cement, aggregates and sand, ensuring every project has the right resources to succeed."
         />
         <div className="relative mt-10 mx-2 inline-block">
           {isImageLoaded && (

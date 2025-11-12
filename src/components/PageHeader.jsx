@@ -67,7 +67,7 @@ const PageHeader = ({ title, subtitle, subHeading }) => {
             >
               {subHeading && (
                 <h3
-                  className="text-[#2387C0] text-sm md:text-base **inline-block** font-semibold text-nowrap uppercase
+                  className="text-[#2387C0] text-sm text-wrap md:text-base **inline-block** font-semibold sm:text-nowrap uppercase
                   bg-blue-50 py-1.5 px-2 mb-4 rounded-full border border-blue-100 inline-block"
                 >
                   {subHeading}

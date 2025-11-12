@@ -152,7 +152,7 @@ const TransparentNavbar = () => {
       </div>
 
       {/* Mobile: 50px height, Desktop/Tablet: 40px height */}
-      <div className="h-6 md:h-[40px] w-full"></div>
+      <div className="h-6 md:h-[30px] w-full"></div>
 
       {/* 3. Main Navigation Bar - NOW SCROLLABLE */}
       <div 

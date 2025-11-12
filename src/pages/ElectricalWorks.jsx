@@ -34,11 +34,11 @@ const ElectricalWorks = () => {
       <TransparentNavbar />
       <div className="flex  flex-wrap pt-5 lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <div className="order-2 lg:order-1">
-        <PageHeader
-          title="Electrical Works"
-          subHeading="YOUR NEXT PROJECT STARTS HERE"
-          subtitle="We’re here to help and answer any questions you may have. Whether you’re looking for more information about our services, projects or career opportunities, our team is ready to assist you. Get in touch with us through the form below, email or phone and we’ll ensure your inquiries are addressed promptly and efficiently. Your connection with us is important and we look forward to hearing from you."
-        />
+          <PageHeader
+            title="Electrical Works"
+            subHeading="ELECTRICAL SOLUTIONS FOR EVERY PROJECT"
+            subtitle="We provide comprehensive electrical services for construction and infrastructure projects, combining technical expertise with safety and reliability. From installation and maintenance to power distribution and lighting solutions, our certified team ensures every project meets the highest standards of quality and compliance. Whether it’s a large-scale development or specialized electrical requirement, we deliver efficient, safe and sustainable solutions tailored to your needs."
+          />
         </div>
         <div className="relative mt-10 mx-2 order-1 lg:order-2 inline-block">
           {isImageLoaded && (
