@@ -135,7 +135,7 @@ const TransparentNavbar = () => {
           </div>
           </div>
           {/* Mobile Top Links - Height is approximately 115px */}
-          <div className="md:hidden flex justify-between h-5 text-white py-3 space-y-3">
+          <div className="md:hidden flex flex-col items-center gap-1 justify-center h-10 sm:flex-row sm:items-start  sm:gap-5 sm:justify-between sm:h-5 text-white  sm:pb-5 sm:space-y-3">
             {/* Email */}
             <div className="flex items-center space-x-2 text-sm font-medium">
               <HiMail className="text-white/90 text-lg" />
@@ -143,7 +143,7 @@ const TransparentNavbar = () => {
             </div>
 
             {/* Phone */}
-            <div className="flex items-center space-x-2 text-sm font-medium">
+            <div className="flex items-center  space-x-2 text-sm font-medium">
               <HiPhone className="text-white/90 text-lg" />
               <span>+966-50-4393166</span>
             </div>   
@@ -152,7 +152,7 @@ const TransparentNavbar = () => {
       </div>
 
       {/* Mobile: 50px height, Desktop/Tablet: 40px height */}
-      <div className="h-4 md:h-[40px] w-full"></div>
+      <div className="h-6 md:h-[40px] w-full"></div>
 
       {/* 3. Main Navigation Bar - NOW SCROLLABLE */}
       <div 
