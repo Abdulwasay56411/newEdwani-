@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -41,18 +41,28 @@ const Footer = () => {
             Company
           </h3>
           <ul className="space-y-3 text-gray-400 text-base sm:text-lg select-none">
-            {["About", "Services", "Customer", "QHSE"].map(
-              (item) => (
-                <li
-                  key={item}
-                  className="hover:text-[#2387C0] active:text-[#2387C0] cursor-pointer transition-all duration-300 hover:translate-x-1"
+            {["About", "Services", "Customer", "QHSE"].map((item) => (
+              <li
+                key={item}
+                className="
+        cursor-pointer 
+        transition-all 
+        duration-300 
+        hover:translate-x-1"
+              >
+                <NavLink
+                  to={`/${item.toLowerCase()}`}
+                  className={({ isActive }) =>
+                    `
+            hover:text-[#2387C0] 
+            ${isActive ? "text-[#2387C0]" : "text-gray-400"}
+          `
+                  }
                 >
-                  <Link to={`/${item.toLowerCase().replace("", "")}`}>
-                    {item}
-                  </Link>
-                </li>
-              )
-            )}
+                  {item}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -63,29 +73,43 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3 text-gray-400 text-base sm:text-lg">
             {["Civil", "Landscaping", "Hardscaping", "Safety Consultancy"].map(
-              (item) => (
-                <li
-                  key={item}
-                  className="hover:text-[#2387C0] active:text-[#2387C0]  cursor-pointer transition-all duration-300 hover:translate-x-1"
-                >
-                  <Link
-                    to={
-                      item === "Civil"
-                        ? "/services/civil"
-                        : item === "Landscaping"
-                        ? "/services/landscaping"
-                        : item === "Hardscaping"
-                        ? "/services/hardscaping"
-                        : item === "Safety Consultancy"
-                        ? "/services/safety"
-                        : "/services"
-                    }
-                    className="block"
+              (item) => {
+                const getPath = (service) => {
+                  switch (service) {
+                    case "Civil":
+                      return "/services/civil";
+                    case "Landscaping":
+                      return "/services/landscaping";
+                    case "Hardscaping":
+                      return "/services/hardscaping";
+                    case "Safety Consultancy":
+                      return "/services/safety";
+                    default:
+                      return "/services";
+                  }
+                };
+
+                const targetPath = getPath(item);
+
+                return (
+                  <li
+                    key={item}
+                    className="cursor-pointer transition-all duration-300 hover:translate-x-1"
                   >
-                    {item}
-                  </Link>
-                </li>
-              )
+                    <NavLink
+                      to={targetPath}
+                      className={({ isActive }) =>
+                        `block 
+             hover:text-[#2387C0] 
+             ${isActive ? "text-[#2387C0] " : "text-gray-400"}
+            `
+                      }
+                    >
+                      {item}
+                    </NavLink>
+                  </li>
+                );
+              }
             )}
           </ul>
         </div>
@@ -95,37 +119,55 @@ const Footer = () => {
           <h3 className="text-[#2387C0] text-lg sm:text-xl font-semibold uppercase mb-5">
             QHSE
           </h3>
-          <ul className="space-y-3 text-gray-400 text-base sm:text-lg">
+          <ul className="space-y-3 text-gray-400 text-base sm:text-lg select-none">
             {[
               "Our Commitment",
               "Quality Policy",
               "Environmental Policy",
               "Areas of Certification",
-            ].map((item) => (
-              <li
-                key={item}
-                className="hover:text-[#2387C0] active:text-[#2387C0]  cursor-pointer transition-all duration-300 hover:translate-x-1"
-              >
-                <Link
-                  to={
-                    item === "Our Commitment"
-                      ? "/qhse/commitment"
-                      : item === "Quality Policy"
-                      ? "/qhse/quality-policy"
-                      : item === "Environmental Policy"
-                      ? "/qhse/environmental"
-                      : 
-                      item === "Areas of Certification"
-                      ? "/qhse/certification"
-                      : 
-                        "/qhse"
-                  }
-                  className="block"
+            ].map((item) => {
+             
+              const getPath = (linkItem) => {
+                switch (linkItem) {
+                  case "Our Commitment":
+                    return "/qhse/commitment";
+                  case "Quality Policy":
+                    return "/qhse/quality-policy";
+                  case "Environmental Policy":
+                    return "/qhse/environmental";
+                  case "Areas of Certification":
+                    return "/qhse/certification";
+                  default:
+                    return "/qhse";
+                }
+              };
+
+              const targetPath = getPath(item);
+
+              return (
+                <li
+                  key={item}
+                  className="cursor-pointer transition-all duration-300 hover:translate-x-1"
                 >
-                  {item}
-                </Link>
-              </li>
-            ))}
+                  <NavLink
+                    to={targetPath}
+                    // NavLink ka active state function
+                    className={({ isActive }) =>
+                      `block 
+             hover:text-[#2387C0] 
+             ${
+               isActive
+                 ? "text-[#2387C0] " 
+                 : "text-gray-400" 
+             }
+            `
+                    }
+                  >
+                    {item}
+                  </NavLink>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -138,43 +180,6 @@ const Footer = () => {
         <p className="text-gray-400 text-base sm:text-lg text-center sm:text-left">
           © 2024 Edwani Contracting. All Rights Reserved.
         </p>
-
-        {/* Social Media Icons */}
-        <div className="flex gap-5">
-          {[
-            {
-              label: "Facebook",
-              path: "M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.436c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z",
-            },
-            {
-              label: "Twitter",
-              path: "M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096A4.904 4.904 0 0 1 .934 9.117v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985z",
-            },
-            {
-              label: "LinkedIn",
-              path: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z",
-            },
-            {
-              label: "YouTube",
-              path: "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z",
-            },
-          ].map((icon) => (
-            <a
-              key={icon.label}
-              href="#"
-              className="w-12 h-12 bg-gray-700 hover:bg-[#2387C0] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md hover:shadow-[#2387C0]/40"
-              aria-label={icon.label}
-            >
-              <svg
-                className="w-6 h-6 text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d={icon.path} />
-              </svg>
-            </a>
-          ))}
-        </div>
       </div>
     </footer>
   );

@@ -38,7 +38,7 @@ const LastSection = () => {
                     />
                   </div>
                   <span className="group-hover:text-[#2387C0] transition-colors duration-300">
-                    050-4393166
+                  +966-50-4393166
                   </span>
                 </div>
 
@@ -51,7 +51,7 @@ const LastSection = () => {
                     />
                   </div>
                   <span className="group-hover:text-[#2387C0] transition-colors duration-300 text-sm sm:text-base">
-                    edwanigroup@gmail.com
+                  info@edwanicontracting.com
                   </span>
                 </div>
               </div>

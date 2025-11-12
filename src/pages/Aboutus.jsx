@@ -42,7 +42,7 @@ const Aboutus = () => {
           )}
           <img
             className="relative w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-xl"
-            src="/bgservices.png"
+            src="/about us.jpg"
             onLoad={handleImageLoad}
           />
         </div>

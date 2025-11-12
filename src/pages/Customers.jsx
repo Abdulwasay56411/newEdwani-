@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import OurClients from "../components/About/OurClients";
-import PageHeader from "../components/PageHeader"; // ✅ Import Reusable Header
+import PageHeader from "../components/PageHeader"; //  Import Reusable Header
 import TransparentNavbar from "../components/TransparentNavbar";
 
 const Customers = () => {
@@ -34,7 +34,7 @@ const Customers = () => {
        )}
           <img
             className="relative w-[400px] h-[300px] mt-5 mr-4 object-cover rounded-lg rotate-1"
-            src="/bgservices.png"
+            src="/customer img.jpg"
             onLoad={handleImageLoad}
           />
         </div>
