@@ -15,7 +15,7 @@ const Home = () => {
     <div className="flex flex-col">
       <TransparentNavbar />
       {/* Hero Section */}
-      <section className="pt-34 md:pt-24 md:pb-2">
+      <section className="pt-10 md:pt-0 md:pb-2">
         <HeroSection />
       </section>
 

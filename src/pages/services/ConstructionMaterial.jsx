@@ -13,9 +13,7 @@ const ConstructionMaterial = () => {
     <div className="relative">
       {/* ✅ Reusable Header Component */}
       <TransparentNavbar />
-      <div className="pt-30">
         <PageHeader />
-      </div>
 
       {/* ✅ Content Section (unchanged) */}
       <div className=" bg-gray-50 ">

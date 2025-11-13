@@ -26,7 +26,7 @@ const Qhse = () => {
           subHeading="EXCELLENCE IN QUALITY, SAFETY & ENVIRONMENT"
           subtitle="At the core of our operations is an unwavering commitment to Quality, Health, Safety and Environmental excellence. We implement stringent QHSE standards across all our projects to ensure the wellbeing of our workforce, the protection of the environment and the delivery of superior quality outcomes. By fostering a culture of safety, accountability and continuous improvement, we not only meet regulatory requirements but also exceed industry benchmarks, reinforcing our reputation as a responsible and reliable construction partne"
         />
-        <div className="relative mt-10 mx-2 inline-block">
+        <div className="relative lg:mt-5 mx-2 inline-block">
           {isImageLoaded && (
             <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
           )}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ProjectCard() {
   const projects = [
@@ -228,9 +229,9 @@ export default function ProjectCard() {
               Let's discuss how we can bring your vision to life with our
               expertise and commitment to excellence.
             </p>
-            <button className="bg-white text-[#2387C0] hover:bg-gray-100 font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <Link to="/contact" className="bg-white text-[#2387C0] hover:bg-gray-100 font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
               Start Your Project Today
-            </button>
+            </Link>
           </div>
         </div>
       </div>

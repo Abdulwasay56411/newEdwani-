@@ -14,9 +14,7 @@ const SafetyConsultancy = () => {
     <div className="relative">
       {/* ✅ Reusable Header Component */}
       <TransparentNavbar/>
-      <div className="pt-30">
         <PageHeader />
-      </div>
       {/* ✅ Content Section (unchanged) */}
       <div className=" bg-gray-50 ">
         <div className="container mx-auto px-4 py-4">

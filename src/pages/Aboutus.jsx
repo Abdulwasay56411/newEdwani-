@@ -26,7 +26,7 @@ const Aboutus = () => {
     >
       <TransparentNavbar />
       {/* ✅ Reusable Header Component */}
-      <div className="flex flex-wrap pt-30 lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <div className="order-2 lg:order-1">
           <PageHeader
             title="About Us"
@@ -35,7 +35,7 @@ const Aboutus = () => {
             subHeading="Our CEO’s Commitment to Excellence"
           />
         </div>
-        <div className="order-1 mb-5 mt-10 mx-2 lg:order-2 relative inline-block">
+        <div className="order-1 mt-5 mx-2 lg:order-2 relative inline-block">
           {/* Shadow Background */}
           {isImageLoaded && (
             <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>

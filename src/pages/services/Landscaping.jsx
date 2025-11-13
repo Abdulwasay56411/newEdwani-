@@ -14,9 +14,7 @@ const Landscaping = () => {
     <div className="relative">
       {/* ✅ Reusable Page Header */}
       <TransparentNavbar/>
-      <div className="pt-30">
         <PageHeader />
-      </div>
 
       {/* ✅ Content Section */}
       <div className="bg-gray-50">

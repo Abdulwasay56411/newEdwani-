@@ -37,13 +37,13 @@ const Career = () => {
     >
       <TransparentNavbar />
       {/* ✅ Reusable Page Header */}
-      <div className="flex flex-wrap  pt-30  lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
+      <div className="flex flex-wrap lg:flex-nowrap text-center lg:text-left items-center justify-center gap-10 mb-10 px-4">
         <PageHeader
           title="Career"
           subHeading="CAREERS THAT SHAPE THE FUTURE"
           subtitle="Join our team and be part of a dynamic, innovative and growth-driven organization. We are always looking for talented and motivated individuals who are passionate about making an impact. At our company, you’ll find opportunities to grow professionally, work on challenging projects and contribute to a culture of excellence, collaboration and continuous learning. Your skills, ideas and dedication are valued, and together we build solutions that shape the future of construction and infrastructure."
         />
-        <div className="relative mt-10 mx-2 inline-block">
+        <div className="relative lg:mt-5 mx-2 inline-block">
           {isImageLoaded && (
             <div className="absolute top-3 -left-2 w-full mx-2 max-w-[420px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
           )}

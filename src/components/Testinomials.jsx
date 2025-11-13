@@ -1,8 +1,12 @@
 import React from "react";
 import { FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Testimonials = () => {
+
+  const MotionLink = motion(Link);
+
   const testimonials = [
     {
       title: "Project Manager, Yasref",
@@ -202,7 +206,8 @@ const Testimonials = () => {
           <p className="text-gray-600 text-lg lg:text-xl mb-6 font-light">
             Ready to start your next project?
           </p>
-          <motion.button
+          <MotionLink
+           to="/contact"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(35, 135, 192, 0.3)",
@@ -211,7 +216,7 @@ const Testimonials = () => {
             className="bg-[#2387C0] text-white px-8 lg:px-12 py-4 lg:py-5 rounded-2xl font-semibold text-lg lg:text-xl shadow-lg hover:bg-[#1279b5]  transition-all duration-300"
           >
             Get Started Today
-          </motion.button>
+          </MotionLink>
         </motion.div>
       </div>
     </section>

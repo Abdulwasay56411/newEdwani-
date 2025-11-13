@@ -132,7 +132,7 @@ const ApplyNow = () => {
                       href="mailto:careers@edwanigroup.com"
                       className="text-[#2387C0] hover:text-blue-700 transition-colors duration-300 text-base md:text-lg break-all"
                     >
-                      careers@edwanigroup.com
+                      info@edwanicontracting.com
                     </a>
                     <p className="text-gray-600 text-xs md:text-sm mt-1">
                       We typically respond within 24 hours

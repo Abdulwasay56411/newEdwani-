@@ -76,7 +76,7 @@ const EnvironmentalPolicy = () => {
     <div className="bg-white">
       {/* Main Heading Section - Exact same as AwardsRecognition */}
       <section className="relative bg-white text-gray-900">
-        <div className="flex justify-center  pt-20  items-center text-center lg:text-left flex-wrap lg:flex-nowrap mb-5 gap-10 px-4">
+        <div className="flex justify-center  items-center text-center lg:text-left flex-wrap lg:flex-nowrap mb-5 gap-10 px-4">
         <div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
             Environmental Policy
@@ -88,7 +88,7 @@ const EnvironmentalPolicy = () => {
             future for all.
           </p>
         </div>
-        <div className="relative mt-10  inline-block">
+        <div className="relative inline-block">
        {isImageLoaded &&(
                 <div className="absolute top-3 -left-2 w-full mx-2 max-w-[400px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
        )}

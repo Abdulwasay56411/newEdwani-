@@ -15,9 +15,7 @@ const CivilEngineering = () => {
     <div className="relative">
       {/* ✅ Reusable Header */}
       <TransparentNavbar/>
-      <div className="pt-30">
         <PageHeader />
-      </div>
       <div className="bg-gray-50">
         {/* Content Section */}
         <div className="container mx-auto px-4 py-4">

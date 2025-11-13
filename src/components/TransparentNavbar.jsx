@@ -116,6 +116,7 @@ const TransparentNavbar = () => {
   return (
     <div className="w-full bg-transparent">
       
+      {/* 1. Top Contact Bar (Fixed) */}
       <div className="w-full fixed top-0 left-0 z-[1000] bg-gradient-to-r from-[#2387C0] to-[#2a95d6] py-2 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="w-full">
           {/* Desktop & Tablet Top Links */}
@@ -128,36 +129,35 @@ const TransparentNavbar = () => {
               </span>
             </div>
           <div>
-          <span className="flex items-center space-x-2 text-sm lg:text-[15px] font-medium bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg">
+            <span className="flex items-center space-x-2 text-sm lg:text-[15px] font-medium bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg">
                 <HiPhone className="text-white/90 text-sm" />
                 <span>+966-50-4393166</span>
               </span>
           </div>
           </div>
-          {/* Mobile Top Links - Height is approximately 115px */}
-          <div className="md:hidden flex flex-col items-center gap-1 justify-center h-10 sm:flex-row sm:items-start  sm:gap-5 sm:justify-between sm:h-5 text-white  sm:pb-5 sm:space-y-3">
+          {/* Mobile Top Links */}
+          <div className="md:hidden flex flex-col items-center gap-1 justify-center text-white py-1"> 
             {/* Email */}
             <div className="flex items-center space-x-2 text-sm font-medium">
-              <HiMail className="text-white/90 text-lg" />
+              <HiMail className="text-white/90 text-base" />
               <span>info@edwanicontracting.com</span>
             </div>
 
             {/* Phone */}
-            <div className="flex items-center  space-x-2 text-sm font-medium">
-              <HiPhone className="text-white/90 text-lg" />
+            <div className="flex items-center space-x-2 text-sm font-medium">
+              <HiPhone className="text-white/90 text-base" />
               <span>+966-50-4393166</span>
-            </div>   
+            </div>   
           </div>
         </div>
       </div>
 
-      {/* Mobile: 50px height, Desktop/Tablet: 40px height */}
-      <div className="h-6 md:h-[30px] w-full"></div>
+      <div className="h-[40px] md:h-[40px] mb-30 w-full"></div> 
+      {/* The main navbar is fixed, so this spacer is critical. I'm using an estimated combined height here. */}
 
-      {/* 3. Main Navigation Bar - NOW SCROLLABLE */}
+      {/* 3. Main Navigation Bar - NOW FIXED AND CENTERED */}
       <div 
-        // Removed fixed, top-[...], and z-[999] classes 
-        className="w-full bg-white/98 fixed backdrop-blur-lg shadow-lg border-b border-gray-100 transition-all duration-300  z-[999]"
+        className="w-full bg-white/98 flex items-center lg:h-24 fixed backdrop-blur-lg shadow-lg border-b border-gray-100 transition-all duration-300 top-[60px] md:top-[44px] z-[999]"
       >
         <div className="w-full py-2 px-4 sm:px-6 lg:px-8 xl:px-6 2xl:px-14">
           {/* ===== Desktop Navbar (1024px and above) ===== */}
@@ -294,7 +294,7 @@ const TransparentNavbar = () => {
             </div>
 
             {/* Navigation Links - Adjusted for tablet */}
-            <div className="flex items-cente text-base font-bold  justify-center flex-1 min-w-0 mx-4">
+            <div className="flex items-cente text-base font-bold justify-center flex-1 min-w-0 mx-4">
               <ul className="flex items-center justify-center space-x-4">
                 {mainLinks.slice(0, 7).map(
                   (
@@ -390,7 +390,7 @@ const TransparentNavbar = () => {
           </nav>
 
           {/* ===== Mobile Navbar (below 768px) ===== */}
-          <nav className="flex lg:hidden mt-4 items-center justify-between py-3">
+          <nav className="flex lg:hidden **items-center** justify-between py-2"> {/* items-center added for vertical alignment */}
             {/* Mobile Menu Button - Left Side */}
             <div
               onClick={() => setMenuOpen(!menuOpen)}
@@ -429,7 +429,7 @@ const TransparentNavbar = () => {
         </div>
       </div>
 
-      {/* ===== Enhanced Mobile Menu (This is always fixed) ===== */}
+      {/* ===== Enhanced Mobile Menu (This is always fixed) - No changes here, looks fine ===== */}
       <div
         className={`xl:hidden fixed inset-0 z-[9999] transition-all duration-500 ease-in-out ${
           menuOpen ? "opacity-100 visible" : "opacity-0 invisible"

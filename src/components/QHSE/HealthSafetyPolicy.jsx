@@ -100,7 +100,7 @@ const HealthSafetyPolicy = () => {
     <div className="bg-white">
       {/* Main Heading Section - Only One Heading */}
       <section className="relative bg-white text-gray-900">
-        <div className="flex justify-center  pt-20  items-center text-center lg:text-left flex-wrap lg:flex-nowrap gap-10 mb-5 px-4">
+        <div className="flex justify-center items-center text-center lg:text-left flex-wrap lg:flex-nowrap gap-10 mb-5 px-4">
           <div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2387C0] mb-3 md:mb-4">
               Health & Safety Policy
@@ -112,7 +112,7 @@ const HealthSafetyPolicy = () => {
               protecting company assets.
             </p>
           </div>
-          <div className="relative mt-10 mx-2 inline-block">
+          <div className="relative mx-2 inline-block">
          {isImageLoaded && (
             <div className="absolute top-3 -left-2 w-full mx-2 max-w-[400px] h-[311px] bg-[#E7E7E7] rounded-3xl -rotate-4 "></div>
          )}
